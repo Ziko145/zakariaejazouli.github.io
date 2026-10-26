@@ -265,8 +265,26 @@ html.light ::selection {
   border-color: var(--separator-strong);
 }
 
+html.light .nav-container {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
 html.light .nav-container.scrolled {
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+html.dark .nav-container.scrolled {
+  background: rgba(20, 20, 22, 0.94) !important;
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 0 1px rgba(255, 255, 255, 0.18);
 }
 
 /* Nav Brand */
@@ -282,6 +300,10 @@ html.light .nav-container.scrolled {
   text-decoration: none;
   white-space: nowrap;
   transition: opacity var(--duration-fast);
+}
+
+html.light .nav-brand {
+  color: #1d1d1f;
 }
 
 .nav-brand:hover {
@@ -320,11 +342,12 @@ html.light .nav-container.scrolled {
 }
 
 html.light .nav-link {
-  color: #333336;
+  color: #1d1d1f !important;
+  font-weight: 500;
 }
 
 html.dark .nav-link {
-  color: rgba(235, 235, 245, 0.78);
+  color: rgba(235, 235, 245, 0.85) !important;
 }
 
 .nav-link:hover {
@@ -333,8 +356,30 @@ html.dark .nav-link {
 }
 
 html.light .nav-link:hover {
-  color: #000000;
-  background: rgba(0, 0, 0, 0.06);
+  color: var(--apple-blue) !important;
+  background: rgba(0, 113, 227, 0.08) !important;
+}
+
+html.light #btn-download-cv {
+  color: #1d1d1f !important;
+  border-color: rgba(0, 0, 0, 0.16) !important;
+}
+
+html.light #btn-download-cv:hover {
+  background: rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+html.light #btn-github-nav {
+  color: #1d1d1f !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light #theme-toggle-btn {
+  color: #1d1d1f !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Nav Actions */
