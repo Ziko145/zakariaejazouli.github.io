@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakariae Jazouli | Ingénieur Logiciel — Backend, Systèmes & MLOps</title>
+  <meta name="description" content="Vitrine web et portfolio d'ingénierie de Zakariae Jazouli, élève-ingénieur en Génie Logiciel à l'ENSIAS. Projets backend, systèmes distribués, Cloud et MLOps en production.">
+  <meta name="author" content="Zakariae Jazouli">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-middle"></div>
+  <div class="ambient-glow glow-bottom"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" id="brand-link">
+        <span class="brand-code">&lt;</span>
+        <span class="brand-name">Zakariae.Jazouli</span>
+        <span class="brand-code">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="nav-link" id="nav-about">À propos</a>
+        <a href="#projects" class="nav-link" id="nav-projects">Projets</a>
+        <a href="#architecture" class="nav-link" id="nav-arch">Architecture</a>
+        <a href="#experience" class="nav-link" id="nav-exp">Expériences</a>
+        <a href="#skills" class="nav-link" id="nav-skills">Compétences</a>
+        <a href="#video-pitch" class="nav-link" id="nav-video">Pitch Vidéo</a>
+        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-icon theme-toggle" id="theme-toggle-btn" aria-label="Changer de thème (Clair / Sombre)" title="Changer de thème">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="assets/CV_Zakariae_Jazouli.pdf" target="_blank" class="btn btn-outline btn-sm" id="btn-download-cv">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>CV (PDF)</span>
+        </a>
+        <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-github-nav" title="GitHub">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Menu Mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge animate-fade-in">
+            <img src="assets/logo-ensias.png" alt="ENSIAS Logo" class="hero-school-logo">
+            <span>Élève-Ingénieur en Génie Logiciel • ENSIAS Rabat</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-in-delay-1">
+            Zakariae <span class="gradient-text">Jazouli</span>
+          </h1>
+
+          <p class="hero-subtitle animate-fade-in-delay-2">
+            Software Engineer <span class="divider-slash">/</span> Backend <span class="divider-slash">/</span> Systèmes Distribués &amp; MLOps
+          </p>
+
+          <p class="hero-pitch animate-fade-in-delay-3">
+            Concepteur de backends résilients, de moteurs de données et d'infrastructures Cloud. Deux expériences significatives en production chez <strong>Autoroutes du Maroc (ADM)</strong> et <strong>Holding Al Omrane</strong>, alliées à la passion d'implémenter les systèmes complexes depuis les premiers principes.
+          </p>
+
+          <div class="hero-actions animate-fade-in-delay-4">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
+              <span>Explorer les Projets</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#video-pitch" class="btn btn-glass" id="hero-btn-video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Voir le Pitch Vidéo</span>
+            </a>
+            <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
+              <span>Me Contacter</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-stats animate-fade-in-delay-5">
+            <div class="stat-card">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Stages en Production (ADM &amp; Al Omrane)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">15K+</span>
+              <span class="stat-label">Événements capteurs/jour traités (ADM)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">&lt; 100ms</span>
+              <span class="stat-label">Latence p95 API inférence XGBoost</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Certifications (AWS, Cisco, DataCamp)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Terminal Showcase -->
+        <div class="hero-visual animate-fade-in-delay-3">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">zakariae@ensias-system: ~/profile</span>
+            </div>
+            <div class="terminal-body">
+              <p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat engineer_manifest.json</span></p>
+              <pre class="term-output"><code>{
+  <span class="json-key">"engineer"</span>: <span class="json-str">"Zakariae Jazouli"</span>,
+  <span class="json-key">"school"</span>: <span class="json-str">"ENSIAS (Promotion 2027)"</span>,
+  <span class="json-key">"background"</span>: <span class="json-str">"CPGE MPSI/MP (Concours National Commun)"</span>,
+  <span class="json-key">"specialization"</span>: [
+    <span class="json-str">"High-Performance Backend (Java / C# / Python)"</span>,
+    <span class="json-str">"Distributed Systems & Vector Clocks"</span>,
+    <span class="json-str">"Production MLOps & Stream Ingestion"</span>,
+    <span class="json-str">"Cloud Infrastructure (AWS, Kubernetes, Docker)"</span>
+  ],
+  <span class="json-key">"target_pfe_role"</span>: <span class="json-str">"Software Engineer (Backend & Cloud)"</span>,
+  <span class="json-key">"preferred_targets"</span>: [<span class="json-str">"BCG X"</span>, <span class="json-str">"Oracle"</span>, <span class="json-str">"Ostorlab"</span>],
+  <span class="json-key">"status"</span>: <span class="json-str">"Ready to deploy high-impact code 🚀"</span>
+}</code></pre>
+              <p class="term-line terminal-cursor"><span class="term-prompt">$</span> <span class="term-cmd">curl -s https://api.zakariae.dev/healthcheck</span></p>
+              <p class="term-response"><span class="badge-status-ok">[200 OK]</span> Systems nominal. All pipelines active.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">À propos &amp; Vision</span>
+          <h2 class="section-title">Comprendre sous le capot pour <span class="gradient-text">bâtir du solide</span></h2>
+          <p class="section-desc">Mon parcours est guidé par une curiosité technique profonde et le refus des boîtes noires.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-panel">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3>Fondations Mathématiques &amp; Algorithmiques</h3>
+            <p>
+              Issu des <strong>Classes Préparatoires aux Grandes Écoles (CPGE MP)</strong> à First Prépa Meknès et admis à l'<strong>ENSIAS</strong> via le Concours National Commun, j'ai développé une grande rigueur analytique, une endurance intellectuelle et un goût prononcé pour l'optimisation algorithmique.
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+            </div>
+            <h3>Ingénierie Systèmes &amp; Concurrence</h3>
+            <p>
+              Au-delà de l'assemblage de frameworks, j'aime concevoir des architectures depuis les premiers principes : gestion de mémoire par pages et buffer pools LRU, indexation par arbres B+, ordering causal par horloges vectorielles, et maîtrise fine du multithreading.
+            </p>
+          </div>
+
+          <div class="about-card glass-panel">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            </div>
+            <h3>Pratiques de Production &amp; Résilience</h3>
+            <p>
+              Éprouvé sur le terrain lors de mes stages chez <strong>Autoroutes du Maroc (ADM)</strong> et <strong>Holding Al Omrane</strong> : livraison de code testé, astreintes opérationnelles nocturnes, réduction des fausses alertes, monitoring de métriques et pipelines CI/CD conteneurisés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase (D:/Projects) -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Projets d'Ingénierie</span>
+          <h2 class="section-title">Réalisations &amp; Code de Production <span class="gradient-text">(D:\Projects)</span></h2>
+          <p class="section-desc">Sélection de systèmes réels déployés en entreprise, plateformes cloud et moteurs logiciels développés from scratch.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" id="project-filters">
+          <button class="filter-btn active" data-filter="all">Tous les Projets</button>
+          <button class="filter-btn" data-filter="production">🏢 Entreprise &amp; Prod</button>
+          <button class="filter-btn" data-filter="systems">⚙️ Systèmes &amp; Core</button>
+          <button class="filter-btn" data-filter="mlops">🧠 IA &amp; MLOps</button>
+          <button class="filter-btn" data-filter="fullstack">💻 Cloud &amp; Full-Stack</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid-container">
+
+          <!-- Project 1: ADM 2026 -->
+          <article class="project-card glass-panel" data-category="production mlops systems" id="card-adm">
+            <div class="project-badge-top">
+              <span class="badge-tag production">Production • ADM</span>
+              <span class="badge-metric">-35% fausses alertes</span>
+            </div>
+            <div class="project-image-container">
+              <img src="assets/adm-dashboard.png" alt="Tableau de bord ADM 2026" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="adm">Voir les Détails</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">ADM 2026 — Plateforme Temps Réel de Détection d'Anomalies Péages</h3>
+              <p class="project-summary">
+                Architecture microservices automatisée pour <strong>Autoroutes du Maroc (ADM)</strong> filtrant 15 000+ événements capteurs quotidiens en temps réel via XGBoost, clustering HDBSCAN, inférence SHAP et Spring Boot Resilience4j.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Java 21</span>
+                <span class="tag">Spring Boot 3</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">Apache Kafka</span>
+                <span class="tag">Oracle DB 21c</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>p95 &lt; 100ms</strong> latence</span>
+                  <span><strong>11.7K+</strong> alarmes validées</span>
+                </div>
+                <button class="btn btn-outline btn-sm view-project-btn" data-project="adm">Détails &amp; Schémas &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Atlas 360 -->
+          <article class="project-card glass-panel" data-category="fullstack" id="card-atlas">
+            <div class="project-badge-top">
+              <span class="badge-tag fullstack">Next.js 16 • Stripe • 360°</span>
+              <span class="badge-metric">55 Tests automatisés</span>
+            </div>
+            <div class="project-image-container">
+              <img src="assets/atlas-hero.png" alt="Atlas 360 Marketplace" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="atlas">Voir les Détails</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Atlas 360 — Marketplace &amp; Itinéraires Marocains Panoramiques</h3>
+              <p class="project-summary">
+                Application web luxueuse intégrant Google Maps API et Street View 360° interactif, marketplace de guides locaux avec paiements séquestre Stripe, authentification Supabase et génération d'itinéraires validée par l'API Google Gemini.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Next.js 16</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind CSS v4</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Stripe</span>
+                <span class="tag">Vitest</span>
+                <span class="tag">Playwright</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>38 Unit Tests</strong> Vitest</span>
+                  <span><strong>17 E2E Tests</strong> Playwright</span>
+                </div>
+                <button class="btn btn-outline btn-sm view-project-btn" data-project="atlas">Détails &amp; Schémas &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: YouthChallenge -->
+          <article class="project-card glass-panel" data-category="fullstack systems" id="card-youth">
+            <div class="project-badge-top">
+              <span class="badge-tag systems">JEE • Spring Boot • K8s</span>
+              <span class="badge-metric">AWS Multi-tiers</span>
+            </div>
+            <div class="project-image-container">
+              <img src="assets/youthchallenge-arch.png" alt="Architecture YouthChallenge" class="project-img" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="youth">Voir les Détails</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">YouthChallenge — Plateforme Gamifiée Scalable Cloud</h3>
+              <p class="project-summary">
+                Plateforme sociale gamifiée avec progression XP, classements temps réel via WebSockets (STOMP), mise en cache Redis (Sorted Sets), infrastructure AWS sécurisée sur VPC dédié et déploiement déclaratif orchestré sur Kubernetes.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Spring Boot 3</span>
+                <span class="tag">React 18</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">AWS (VPC, EC2, RDS)</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Docker Compose</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>WebSockets STOMP</strong> live</span>
+                  <span><strong>Redis Cache</strong> p95 &lt; 60ms</span>
+                </div>
+                <button class="btn btn-outline btn-sm view-project-btn" data-project="youth">Détails &amp; Schémas &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Project Monitoring (Al Omrane) -->
+          <article class="project-card glass-panel" data-category="production fullstack" id="card-monitoring">
+            <div class="project-badge-top">
+              <span class="badge-tag production">Entreprise • Al Omrane</span>
+              <span class="badge-metric">+80M$ Supervisés</span>
+            </div>
+            <div class="project-image-container">
+              <div class="project-img-placeholder csharp-gradient">
+                <span class="placeholder-icon">📊</span>
+                <span class="placeholder-title">Al Omrane Project Monitoring</span>
+                <span class="placeholder-sub">ASP.NET Core 8 / C# 12 &bull; Vue 3 &bull; SQL Server</span>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="monitoring">Voir les Détails</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Plateforme Centralisée de Suivi de Projets (Holding Al Omrane)</h3>
+              <p class="project-summary">
+                APIs REST haut débit développées en ASP.NET Core 8 pour superviser 50+ projets nationaux de génie civil. Moteur d'agrégation de 150+ KPIs opérationnels et optimisation de requêtes hiérarchiques WBS sous SQL Server / EF Core 8.
+              </p>
+              <div class="project-tags">
+                <span class="tag">ASP.NET Core 8</span>
+                <span class="tag">C# 12</span>
+                <span class="tag">MS SQL Server</span>
+                <span class="tag">EF Core 8</span>
+                <span class="tag">Vue.js 3</span>
+                <span class="tag">ApexCharts</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>-42%</strong> temps calcul WBS</span>
+                  <span><strong>100+</strong> utilisateurs internes</span>
+                </div>
+                <button class="btn btn-outline btn-sm view-project-btn" data-project="monitoring">Détails &amp; Schémas &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Mini Moteur de Requêtes Java -->
+          <article class="project-card glass-panel" data-category="systems" id="card-sqlengine">
+            <div class="project-badge-top">
+              <span class="badge-tag systems">Core CS • From Scratch</span>
+              <span class="badge-metric">B+ Trees &amp; Buffer Pool</span>
+            </div>
+            <div class="project-image-container">
+              <div class="project-img-placeholder java-gradient">
+                <span class="placeholder-icon">🗄️</span>
+                <span class="placeholder-title">Java Relational Query Engine</span>
+                <span class="placeholder-sub">Storage &bull; B+ Tree Index &bull; Cost-based Optimizer</span>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="sqlengine">Voir les Détails</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Mini Moteur de Requêtes Relationnel Java</h3>
+              <p class="project-summary">
+                Construction intégrale d'un SGBD relationnel mono-nœud en Java : gestionnaire de pages mémoire, buffer pool avec politique d'éviction LRU, slotted-pages, index B+ tree pour les range scans et planificateur SQL basé sur les coûts (predicate pushdown, hash join).
+              </p>
+              <div class="project-tags">
+                <span class="tag">Java 21</span>
+                <span class="tag">B+ Trees</span>
+                <span class="tag">Query Planning</span>
+                <span class="tag">Buffer Management</span>
+                <span class="tag">Algèbre Relationnelle</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>Cost-based</strong> planificateur</span>
+                  <span><strong>Zero framework</strong> core Java</span>
+                </div>
+                <button class="btn btn-outline btn-sm view-project-btn" data-project="sqlengine">Détails &amp; Schémas &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Système de Diffusion Causale Distribué -->
+          <article class="project-card glass-panel" data-category="systems" id="card-causal">
+            <div class="project-badge-top">
+              <span class="badge-tag systems">Systèmes Distribués</span>
+              <span class="badge-metric">Vector Clocks</span>
+            </div>
+            <div class="project-image-container">
+              <div class="project-img-placeholder distributed-gradient">
+                <span class="placeholder-icon">⚡</span>
+                <span class="placeholder-title">Causal Broadcast System</span>
+                <span class="placeholder-sub">TCP Sockets &bull; Vector Clocks &bull; Multithreading</span>
+              </div>
+              <div class="project-overlay">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="causal">Voir les Détails</button>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Système de Diffusion Causale Distribué Java</h3>
+              <p class="project-summary">
+                Réseau pair-à-pair décentralisé en Java sur raw TCP sockets assurant un ordre causal strict des messages sans coordinateur central. Horloges vectorielles et de Lamport, tampon causal et files bloquantes thread-safe résistantes à 200ms de gigue réseau simulée.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Java Sockets</span>
+                <span class="tag">Vector Clocks</span>
+                <span class="tag">Concurrence</span>
+                <span class="tag">Tolérance aux pannes</span>
+                <span class="tag">P2P</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>Ordre causal</strong> strict garanti</span>
+                  <span><strong>Adversarial</strong> testing harness</span>
+                </div>
+                <button class="btn btn-outline btn-sm view-project-btn" data-project="causal">Détails &amp; Schémas &rarr;</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture & Systems Lab (Interactive Tabbed Section) -->
+    <section class="section architecture-section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Laboratoire d'Architecture</span>
+          <h2 class="section-title">Comment je conçois les <span class="gradient-text">Systèmes Critiques</span></h2>
+          <p class="section-desc">Explorez les flux de données, les mécanismes de résilience et les choix de conception de mes projets.</p>
+        </div>
+
+        <div class="arch-lab glass-panel">
+          <div class="arch-tabs">
+            <button class="arch-tab-btn active" data-tab="tab-adm">
+              <span class="tab-icon">⚡</span>
+              <span>Pipeline MLOps ADM</span>
+            </button>
+            <button class="arch-tab-btn" data-tab="tab-sql">
+              <span class="tab-icon">🗄️</span>
+              <span>Moteur SQL &amp; B+ Tree</span>
+            </button>
+            <button class="arch-tab-btn" data-tab="tab-causal">
+              <span class="tab-icon">🌐</span>
+              <span>Causalité Distribuée</span>
+            </button>
+            <button class="arch-tab-btn" data-tab="tab-cloud">
+              <span class="tab-icon">☁️</span>
+              <span>Cloud &amp; Kubernetes</span>
+            </button>
+          </div>
+
+          <div class="arch-content-container">
+            <!-- Tab 1: ADM Architecture -->
+            <div class="arch-tab-pane active" id="tab-adm">
+              <div class="arch-pane-layout">
+                <div class="arch-pane-text">
+                  <h3>Pipeline Temps Réel &amp; Circuit Breaker (Autoroutes du Maroc)</h3>
+                  <p>
+                    Face à 15 000 événements quotidiens provenant des capteurs autoroutiers, le défi était d'éliminer les fausses alertes sans jamais manquer un incident réel ni bloquer les opérateurs.
+                  </p>
+                  <ul class="arch-feature-list">
+                    <li><strong>Ingestion asynchrone :</strong> Flux JSON consommés depuis Apache Kafka par le backend Spring Boot.</li>
+                    <li><strong>Inférence haute performance :</strong> Requête POST vers le microservice FastAPI/XGBoost. Seuil de confiance &ge; 0.90 pour la suppression automatique.</li>
+                    <li><strong>Explicabilité XAI :</strong> Intégration de SHAP TreeExplainer pour fournir l'attribution exacte des variables explicatives de chaque décision.</li>
+                    <li><strong>Résilience à toute épreuve :</strong> Circuit Breaker Resilience4j : en cas de timeout du modèle (&gt; 100ms), fallback automatique en <code>VALID_ALARM</code> pour préserver la sécurité.</li>
+                  </ul>
+                  <div class="arch-actions">
+                    <img src="assets/logo-adm.png" alt="ADM" class="partner-logo">
+                    <span class="verified-label">✅ Validé sur 11 741 enregistrements réels</span>
+                  </div>
+                </div>
+                <div class="arch-pane-visual">
+                  <img src="assets/adm-arch.png" alt="Schéma Architecture ADM" class="arch-diagram-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: SQL Engine -->
+            <div class="arch-tab-pane" id="tab-sql">
+              <div class="arch-pane-layout">
+                <div class="arch-pane-text">
+                  <h3>Mini SGBD Relationnel : Storage, B+ Tree &amp; Query Optimizer</h3>
+                  <p>
+                    Implémenté en Java pur pour percer le fonctionnement interne des moteurs comme Postgres et MySQL.
+                  </p>
+                  <ul class="arch-feature-list">
+                    <li><strong>Couche de stockage :</strong> Pages de 4KB avec structure en <em>slotted-pages</em> pour stocker des enregistrements à longueur variable.</li>
+                    <li><strong>Buffer Pool Manager :</strong> Mise en cache de pages en mémoire vive avec algorithme de remplacement LRU (Least Recently Used) et synchronisation dirty-page sur disque.</li>
+                    <li><strong>Index B+ Tree :</strong> Index multi-voies équilibré supportant les recherches par clé (point lookups) et les parcours ordonnés par intervalle (range scans).</li>
+                    <li><strong>Optimiseur basé sur les coûts :</strong> Évaluation statistique de cardinalité, <em>predicate pushdown</em> et sélection dynamique de jointure (Hash Join vs Block Nested Loop).</li>
+                  </ul>
+                </div>
+                <div class="arch-pane-visual">
+                  <div class="code-preview-window">
+                    <div class="code-header">BPlusTreeIndex.java (Core logic)</div>
+                    <pre class="code-content"><code><span class="c-kw">public</span> <span class="c-kw">class</span> <span class="c-type">BPlusTreeIndex</span>&lt;K <span class="c-kw">extends</span> <span class="c-type">Comparable</span>&lt;K&gt;, V&gt; {
+    <span class="c-kw">private final int</span> maxOrder;
+    <span class="c-kw">private</span> <span class="c-type">Node</span>&lt;K, V&gt; root;
+
+    <span class="c-kw">public</span> <span class="c-type">List</span>&lt;V&gt; <span class="c-fn">rangeScan</span>(K startKey, K endKey) {
+        <span class="c-type">LeafNode</span>&lt;K, V&gt; leaf = findLeaf(startKey);
+        <span class="c-type">List</span>&lt;V&gt; results = <span class="c-kw">new</span> <span class="c-type">ArrayList</span>&lt;&gt;();
+        <span class="c-kw">while</span> (leaf != <span class="c-kw">null</span>) {
+            <span class="c-kw">for</span> (<span class="c-kw">int</span> i = 0; i &lt; leaf.keys.size(); i++) {
+                <span class="c-kw">if</span> (leaf.keys.get(i).compareTo(endKey) &gt; 0) <span class="c-kw">return</span> results;
+                <span class="c-kw">if</span> (leaf.keys.get(i).compareTo(startKey) &gt;= 0) {
+                    results.add(leaf.values.get(i));
+                }
+            }
+            leaf = leaf.nextLeaf; <span class="c-comment">// Sequential leaf pointer</span>
+        }
+        <span class="c-kw">return</span> results;
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Causal Broadcast -->
+            <div class="arch-tab-pane" id="tab-causal">
+              <div class="arch-pane-layout">
+                <div class="arch-pane-text">
+                  <h3>Ordre Causal Distribué sans Coordinateur Central</h3>
+                  <p>
+                    Comment garantir que chaque nœud observe les causes avant les effets sur un réseau asynchrone non fiable ?
+                  </p>
+                  <ul class="arch-feature-list">
+                    <li><strong>Vector Clocks (Horloges Vectorielles) :</strong> Chaque nœud maintient un vecteur <code>V[i]</code> incrémenté lors de l'émission et transmis avec chaque trame réseau.</li>
+                    <li><strong>Tampon Causal (Causal Buffering) :</strong> Un message reçu n'est délivré à la couche applicative que si <code>V_msg[k] == V_local[k] + 1</code> pour l'expéditeur et <code>V_msg[j] &le; V_local[j]</code> pour tous les autres nœuds.</li>
+                    <li><strong>Résistance aux pannes :</strong> Harnais de test déterministe simulant du réordonnancement aléatoire de paquets et une latence réseau de 200ms+.</li>
+                  </ul>
+                </div>
+                <div class="arch-pane-visual">
+                  <div class="code-preview-window">
+                    <div class="code-header">VectorClock.java (Causal delivery check)</div>
+                    <pre class="code-content"><code><span class="c-kw">public boolean</span> <span class="c-fn">canDeliver</span>(<span class="c-type">VectorClock</span> msgClock, <span class="c-type">String</span> senderId) {
+    <span class="c-kw">int</span> senderIdx = nodeIndexMap.get(senderId);
+    <span class="c-comment">// Must be the immediate next message from sender</span>
+    <span class="c-kw">if</span> (msgClock.get(senderIdx) != <span class="c-kw">this</span>.clock[senderIdx] + 1) {
+        <span class="c-kw">return false</span>;
+    }
+    <span class="c-comment">// Must not depend on any messages we haven't seen</span>
+    <span class="c-kw">for</span> (<span class="c-kw">int</span> i = 0; i &lt; numNodes; i++) {
+        <span class="c-kw">if</span> (i != senderIdx &amp;&amp; msgClock.get(i) &gt; <span class="c-kw">this</span>.clock[i]) {
+            <span class="c-kw">return false</span>; <span class="c-comment">// Buffer and wait</span>
+        }
+    }
+    <span class="c-kw">return true</span>;
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 4: Cloud & Kubernetes -->
+            <div class="arch-tab-pane" id="tab-cloud">
+              <div class="arch-pane-layout">
+                <div class="arch-pane-text">
+                  <h3>Architecture Cloud Multi-Tiers &amp; Orchestration Kubernetes</h3>
+                  <p>
+                    Déploiement en conteneurs sur infrastructure AWS hautement disponible, sécurisée et automatisée par CI/CD.
+                  </p>
+                  <ul class="arch-feature-list">
+                    <li><strong>Isolation réseau AWS :</strong> VPC personnalisé avec sous-réseaux publics (load balancer, passerelle NAT) et sous-réseaux privés étanches (pods d'application, bases RDS).</li>
+                    <li><strong>Haute disponibilité Kubernetes :</strong> Déploiements déclaratifs avec réplication, sondes de liveness/readiness et <em>zero-downtime rolling updates</em>.</li>
+                    <li><strong>Accélération Redis :</strong> Mise en cache des calculs de classements volumineux pour décharger MySQL et maintenir le p95 sous 60ms.</li>
+                  </ul>
+                </div>
+                <div class="arch-pane-visual">
+                  <img src="assets/youthchallenge-arch.png" alt="Architecture Cloud" class="arch-diagram-img">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Parcours &amp; Expériences</span>
+          <h2 class="section-title">Expérience de terrain &amp; <span class="gradient-text">Formation d'Excellence</span></h2>
+          <p class="section-desc">Des classes préparatoires intensives aux responsabilités d'ingénierie en entreprise.</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- ADM Stage -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">Juillet – Septembre 2025</span>
+                  <span class="timeline-badge">Stage Ingénieur 2A</span>
+                </div>
+                <img src="assets/logo-adm.png" alt="ADM Logo" class="timeline-company-logo">
+              </div>
+              <h3 class="timeline-role">Stagiaire Ingénieur Logiciel &amp; MLOps</h3>
+              <h4 class="timeline-company">Autoroutes du Maroc Groupe (ADM) • Rabat</h4>
+              <ul class="timeline-bullets">
+                <li>Développement d'un backend en <strong>Java / Spring Boot</strong> pour l'ingestion et la persistance en temps réel des anomalies d'équipements autoroutiers.</li>
+                <li>Conception d'un pipeline de détection d'anomalies en <strong>Python (XGBoost, FastAPI)</strong> traitant 15 000+ événements/jour (-35% de fausses alertes).</li>
+                <li>Mise en place de la conteneurisation <strong>Docker</strong> et de l'automatisation <strong>CI/CD</strong>, réduisant les déploiements de plusieurs jours à moins de 20 minutes.</li>
+                <li>Participation aux astreintes opérationnelles et diagnostic d'incidents nocturnes via logs et métriques.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Al Omrane Stage -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">Juin – Juillet 2025</span>
+                  <span class="timeline-badge">Stage Ingénieur 1A</span>
+                </div>
+              </div>
+              <h3 class="timeline-role">Stagiaire Ingénieur Logiciel Full-Stack</h3>
+              <h4 class="timeline-company">Holding Al Omrane • Rabat</h4>
+              <ul class="timeline-bullets">
+                <li>Conception et livraison de la Plateforme Centralisée de Suivi de Projets supervisant 50+ chantiers nationaux (+80M$ de portefeuille).</li>
+                <li>Développement d'APIs REST en <strong>ASP.NET Core 8 / C# 12</strong> avec moteur d'agrégation de 150+ métriques opérationnelles.</li>
+                <li>Optimisation de requêtes SQL et bulk inserts sous <strong>EF Core 8 / SQL Server</strong> (gain de 42% sur le temps de calcul hiérarchique).</li>
+                <li>Création de tableaux de bord interactifs en <strong>Vue.js 3</strong> utilisés par plus de 100 collaborateurs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ENSIAS -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2024 – 2027</span>
+                  <span class="timeline-badge academic">École d'Ingénieurs</span>
+                </div>
+                <img src="assets/logo-ensias.png" alt="ENSIAS Logo" class="timeline-company-logo">
+              </div>
+              <h3 class="timeline-role">Diplôme d’Ingénieur d’État en Génie Logiciel</h3>
+              <h4 class="timeline-company">École Nationale Supérieure d’Informatique et d’Analyse des Systèmes (ENSIAS) • Rabat</h4>
+              <p class="timeline-desc">
+                Dernière année d'ingénierie (2026-2027). Cursus d'excellence couvrant les systèmes distribués, l'algorithmique avancée, les systèmes d'exploitation, la concurrence, les bases de données et la recherche opérationnelle.
+              </p>
+            </div>
+          </div>
+
+          <!-- CPGE MP -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2022 – 2024</span>
+                  <span class="timeline-badge academic">Classes Préparatoires</span>
+                </div>
+              </div>
+              <h3 class="timeline-role">Classes Préparatoires aux Grandes Écoles (CPGE) — MPSI / MP</h3>
+              <h4 class="timeline-company">CPGE First Prépa • Meknès</h4>
+              <p class="timeline-desc">
+                Deux années intensives en Mathématiques avancées, Physique et Informatique algorithmique. Admis à l'ENSIAS via le <strong>Concours National Commun (CNC)</strong>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Stack &amp; Certifications</span>
+          <h2 class="section-title">Compétences Techniques &amp; <span class="gradient-text">Certifications Validées</span></h2>
+          <p class="section-desc">Technologies maîtrisées et mises en pratique sur des projets réels.</p>
+        </div>
+
+        <!-- Certifications Row -->
+        <div class="certifications-grid">
+          <div class="cert-card glass-panel">
+            <div class="cert-badge aws">AWS</div>
+            <div class="cert-info">
+              <h4>AWS Certified Cloud Practitioner</h4>
+              <p>Amazon Web Services • Architectures Cloud, Sécurité IAM, VPC &amp; S3</p>
+            </div>
+            <span class="cert-status verified">Vérifié ✓</span>
+          </div>
+
+          <div class="cert-card glass-panel">
+            <div class="cert-badge cisco">CISCO</div>
+            <div class="cert-info">
+              <h4>Cisco CCNA — Routing &amp; Switching</h4>
+              <p>Cisco • Protocoles de routage, commutation, TCP/IP &amp; sous-réseaux</p>
+            </div>
+            <span class="cert-status verified">Vérifié ✓</span>
+          </div>
+
+          <div class="cert-card glass-panel">
+            <div class="cert-badge datacamp">AI</div>
+            <div class="cert-info">
+              <h4>DataCamp Associate AI Engineer</h4>
+              <p>DataCamp • Pipelines Machine Learning, modélisation supervisée &amp; métriques</p>
+            </div>
+            <span class="cert-status verified">Vérifié ✓</span>
+          </div>
+
+          <div class="cert-card glass-panel">
+            <div class="cert-badge azure">AZURE</div>
+            <div class="cert-info">
+              <h4>Azure Developer Associate (AZ-204)</h4>
+              <p>Microsoft • Autoformation approfondie sur les services Cloud Azure</p>
+            </div>
+            <span class="cert-status in-progress">En cours</span>
+          </div>
+        </div>
+
+        <!-- Tech Matrix Grid -->
+        <div class="skills-matrix">
+          <div class="skill-category glass-panel">
+            <h3><span class="cat-icon">⚡</span> Langages de Programmation</h3>
+            <div class="skill-pills">
+              <span class="pill featured">Java 21</span>
+              <span class="pill featured">Python 3</span>
+              <span class="pill featured">C# 12 / .NET 8</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">SQL / PL-SQL</span>
+              <span class="pill">C</span>
+              <span class="pill">Bash</span>
+            </div>
+          </div>
+
+          <div class="skill-category glass-panel">
+            <h3><span class="cat-icon">🛠️</span> Backend &amp; Frameworks</h3>
+            <div class="skill-pills">
+              <span class="pill featured">Spring Boot 3</span>
+              <span class="pill featured">ASP.NET Core 8</span>
+              <span class="pill featured">FastAPI</span>
+              <span class="pill">Spring Security (JWT)</span>
+              <span class="pill">Next.js (SSR)</span>
+              <span class="pill">APIs RESTful</span>
+              <span class="pill">WebSockets (STOMP)</span>
+            </div>
+          </div>
+
+          <div class="skill-category glass-panel">
+            <h3><span class="cat-icon">🗄️</span> Données &amp; Systèmes Distribués</h3>
+            <div class="skill-pills">
+              <span class="pill featured">Oracle DB 21c</span>
+              <span class="pill featured">PostgreSQL</span>
+              <span class="pill featured">MS SQL Server</span>
+              <span class="pill featured">Redis</span>
+              <span class="pill">Apache Kafka</span>
+              <span class="pill">Vector Clocks</span>
+              <span class="pill">Arbres B+</span>
+            </div>
+          </div>
+
+          <div class="skill-category glass-panel">
+            <h3><span class="cat-icon">☁️</span> Cloud, DevOps &amp; MLOps</h3>
+            <div class="skill-pills">
+              <span class="pill featured">Docker</span>
+              <span class="pill featured">Kubernetes</span>
+              <span class="pill featured">AWS (EC2, S3, RDS, VPC)</span>
+              <span class="pill">CI/CD (GitHub Actions)</span>
+              <span class="pill">MLOps (MLflow, SHAP)</span>
+              <span class="pill">Linux / Unix</span>
+              <span class="pill">Agile / Scrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Pitch Section -->
+    <section class="section video-section" id="video-pitch">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Présentation Multimédia</span>
+          <h2 class="section-title">Pitch Vidéo &amp; <span class="gradient-text">Démonstrateur ePortfolio</span></h2>
+          <p class="section-desc">Vidéo de présentation synthétique de mon profil, de mes projets majeurs et de mes motivations pour le PFE 2027.</p>
+        </div>
+
+        <div class="video-showcase glass-panel">
+          <div class="video-player-wrapper">
+            <video id="portfolio-video" controls poster="assets/adm-dashboard.png">
+              <source src="assets/ePortfolio_Presentation.mp4" type="video/mp4">
+              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+            </video>
+          </div>
+
+          <div class="video-info">
+            <div class="video-meta-badge">Vidéo Officielle du ePortfolio • Format Synthétique</div>
+            <h3>Zakariae Jazouli — Pitch Ingénieur &amp; Démonstration de Projets</h3>
+            <p>
+              Dans cette vidéo, je présente de manière directe et concrète mon parcours entre les classes préparatoires et l'ENSIAS, les responsabilités tenues lors de mes stages chez Autoroutes du Maroc et Al Omrane, ainsi que la démonstration en direct de mes applications logicielles.
+            </p>
+            <div class="video-highlights">
+              <div class="highlight-item">
+                <span class="hl-time">01</span>
+                <div>
+                  <strong>Fondamentaux &amp; Parcours</strong>
+                  <p>CPGE MP &bull; ENSIAS Génie Logiciel</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-time">02</span>
+                <div>
+                  <strong>Projets en Production</strong>
+                  <p>ADM 2026 MLOps &bull; Al Omrane ASP.NET Core</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-time">03</span>
+                <div>
+                  <strong>Objectif de Carrière</strong>
+                  <p>Stage PFE 2027 &bull; Software Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Me Contacter</span>
+          <h2 class="section-title">Prêt à collaborer pour le <span class="gradient-text">PFE 2027</span></h2>
+          <p class="section-desc">Ouvert aux opportunités de stage de fin d'études de 6 mois et aux échanges techniques.</p>
+        </div>
+
+        <div class="contact-card glass-panel">
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Email Professionnel</span>
+                <span class="contact-val" id="email-text">jazoulizaka@gmail.com</span>
+              </div>
+              <button class="btn btn-sm btn-outline copy-btn" id="btn-copy-email" data-copy="jazoulizaka@gmail.com">
+                <span>Copier</span>
+              </button>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Téléphone</span>
+                <span class="contact-val">+212 618504697</span>
+              </div>
+              <a href="tel:+212618504697" class="btn btn-sm btn-outline">Appeler</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Localisation</span>
+                <span class="contact-val">Rabat / Casablanca, Maroc</span>
+                <span class="contact-sub">Mobilité internationale acceptée (France, Europe, Amérique du Nord)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions-box">
+            <h3>Discutons de vos besoins d'ingénierie</h3>
+            <p>Disponible immédiatement pour un entretien technique ou une présentation de projet.</p>
+            <div class="box-buttons">
+              <a href="mailto:jazoulizaka@gmail.com?subject=Opportunité%20Stage%20PFE%20-%20Ingénieur%20Logiciel" class="btn btn-primary" id="btn-email-direct">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>Envoyer un Email Direct</span>
+              </a>
+              <a href="assets/CV_Zakariae_Jazouli.pdf" target="_blank" class="btn btn-glass" id="btn-footer-cv">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Télécharger mon CV (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Project Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-container" id="modal-content">
+      <button class="modal-close" id="modal-close-btn" aria-label="Fermer la modal">&times;</button>
+      <div id="modal-body-dynamic">
+        <!-- Dynamically injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Copié dans le presse-papier !</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Zakariae Jazouli. Conçu pour le ePortfolio ENSIAS &bull; Code disponible sur <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+      <div class="footer-links">
+        <a href="#hero">Haut de page &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
