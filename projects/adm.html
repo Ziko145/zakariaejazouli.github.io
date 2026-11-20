@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autoroutes du Maroc | Étude de cas de Zakariae Jazouli</title>
+  <meta name="description" content="Conception d’un pipeline de détection d’anomalies aux péages avec Spring Boot, Kafka, FastAPI et XGBoost. Architecture et résultats de validation.">
+  <link rel="stylesheet" href="../style.css?v=5">
+  <script src="../theme.js?v=1"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-code" aria-hidden="true">&lt;</span>
+        <span>Zakariae.Jazouli</span>
+        <span class="brand-code" aria-hidden="true">/&gt;</span>
+      </a>
+      <div class="nav-actions">
+        <button class="btn btn-icon theme-toggle" id="theme-toggle-btn" type="button" aria-label="Changer de thème">
+          <svg class="icon-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"/></svg>
+          <svg class="icon-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container case-study" tabindex="-1">
+    <a class="case-back" href="../index.html#card-adm">← Retour aux projets</a>
+    <article>
+      <header class="case-heading">
+        <p class="case-context">Autoroutes du Maroc · Stage ingénieur logiciel et MLOps</p>
+        <h1>Détection d’anomalies <span class="animated-gradient">aux péages</span></h1>
+        <p>J’ai développé un pipeline qui trie les alarmes remontées par les équipements de péage. L’objectif était d’alléger la vérification manuelle tout en maintenant les alertes disponibles si le service de classification tombe en panne.</p>
+      </header>
+
+      <dl class="case-metrics" aria-label="Résultats">
+        <div><dt>Alarmes historiques auditées</dt><dd>11 741</dd></div>
+        <div><dt>Incidents réels détectés sur le jeu de test</dt><dd>88 sur 106</dd></div>
+        <div><dt>Latence moyenne sur flux simulé</dt><dd>42 ms</dd></div>
+      </dl>
+
+      <section class="case-section">
+        <h2>Ce que j’ai construit</h2>
+        <p>Spring Boot consomme les événements Kafka, interroge le modèle XGBoost exposé par FastAPI, puis enregistre la décision dans Oracle. J’ai intégré SHAP pour rendre le score lisible par l’opérateur et HDBSCAN pour regrouper les alertes liées à un même incident.</p>
+        <p>Le moteur distingue trois décisions. Il filtre les fausses alertes à forte confiance, soumet les cas ambigus à l’opérateur et transmet les alarmes jugées réelles. En cas de délai dépassé ou d’indisponibilité de FastAPI, Resilience4j conserve l’alarme dans le circuit de traitement.</p>
+        <figure class="case-figure">
+          <a href="../assets/adm-arch.png">
+            <img src="../assets/adm-arch.png" alt="Schéma des échanges entre la simulation, Kafka, le moteur Spring Boot, FastAPI, Oracle et la console" loading="lazy">
+          </a>
+          <figcaption>Flux d’ingestion et de décision. Sélectionner l’image pour agrandir le schéma.</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section">
+        <h2>Comment j’ai évalué le pipeline</h2>
+        <p>Le rapport de stage décrit un découpage stratifié des 11 741 alarmes historiques auditées. Sur les 2 349 alertes réservées au test, le modèle a repéré 88 des 106 incidents réels, soit 83 % de rappel. La précision pour cette classe était de 19 %, ce qui explique l’intérêt de garder une file de validation humaine pour les cas ambigus.</p>
+        <p>Pour la latence, j’ai mesuré le parcours complet entre l’émission et l’affichage sur 10 000 événements simulés. Le rapport indique une moyenne de 42 ms et un 95e percentile de 57 ms.</p>
+      </section>
+
+      <nav class="case-next" aria-label="Autres projets">
+        <a class="btn btn-outline" href="../assets/adm-dashboard.png">Voir la console de supervision</a>
+        <a class="case-back" href="al-omrane.html">Étude de cas Al Omrane →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Omrane | Étude de cas de Zakariae Jazouli</title>
+  <meta name="description" content="Plateforme de suivi de chantiers en ASP.NET Core, SQL Server et Vue. Optimisation du calcul de la hiérarchie des travaux et de leur avancement.">
+  <link rel="stylesheet" href="../style.css?v=5">
+  <script src="../theme.js?v=1"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-brand">
+        <span class="brand-code" aria-hidden="true">&lt;</span>
+        <span>Zakariae.Jazouli</span>
+        <span class="brand-code" aria-hidden="true">/&gt;</span>
+      </a>
+      <div class="nav-actions">
+        <button class="btn btn-icon theme-toggle" id="theme-toggle-btn" type="button" aria-label="Changer de thème">
+          <svg class="icon-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"/></svg>
+          <svg class="icon-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container case-study" tabindex="-1">
+    <a class="case-back" href="../index.html#card-monitoring">← Retour aux projets</a>
+    <article>
+      <header class="case-heading">
+        <p class="case-context">Holding Al Omrane · Stage ingénieur logiciel full-stack</p>
+        <h1>Suivi de l’avancement <span class="animated-gradient">des chantiers</span></h1>
+        <p>Les équipes avaient besoin de consulter l’avancement de plusieurs dizaines de chantiers et de descendre jusqu’au détail d’une prestation. J’ai développé les API de suivi en ASP.NET Core et les tableaux de bord en Vue.</p>
+      </header>
+
+      <dl class="case-metrics" aria-label="Résultats">
+        <div><dt>Temps de calcul et d’affichage de la hiérarchie</dt><dd>−42 %</dd></div>
+        <div><dt>Projets suivis</dt><dd>50+</dd></div>
+      </dl>
+
+      <section class="case-section">
+        <h2>Comment le calcul a changé</h2>
+        <p>La hiérarchie des travaux, ou WBS, relie chaque prestation à ses sous-tâches. Pour afficher l’avancement d’un projet, il faut retenir le dernier relevé de chaque composant, puis faire remonter le résultat dans l’arbre en tenant compte du poids de chaque tâche.</p>
+        <ol class="case-flow">
+          <li><strong>Charger les prestations du projet</strong><span>EF Core récupère les tâches du projet en une lecture.</span></li>
+          <li><strong>Retenir les relevés récents</strong><span>La requête regroupe le suivi par prestation et composant, puis sélectionne le relevé le plus récent.</span></li>
+          <li><strong>Reconstruire et agréger l’arbre</strong><span>Une table de correspondance par identifiant parent permet de parcourir les enfants et de calculer l’avancement pondéré.</span></li>
+        </ol>
+        <p>La création des sous-prestations générées était aussi regroupée avec <code>AddRangeAsync</code>, suivie d’un seul <code>SaveChangesAsync</code> pour ce lot.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>Résultat</h2>
+        <p>Mon bilan de stage indique une baisse de 42 % sur le temps combiné de calcul et d’affichage de la WBS. L’API renvoie à l’interface l’arbre prêt à afficher, avec les pourcentages d’avancement calculés à chaque niveau.</p>
+      </section>
+
+      <nav class="case-next" aria-label="Autres projets">
+        <a class="case-back" href="adm.html">← Étude de cas Autoroutes du Maroc</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

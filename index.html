@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zakariae Jazouli | Ingénieur Logiciel — Backend, Systèmes & MLOps</title>
-  <meta name="description" content="Vitrine web et portfolio d'ingénierie de Zakariae Jazouli, élève-ingénieur en Génie Logiciel à l'ENSIAS. Projets backend, systèmes distribués, Cloud et MLOps en production.">
+  <title>Zakariae Jazouli | Backend &amp; systèmes distribués</title>
+  <meta name="description" content="Portfolio de Zakariae Jazouli, élève-ingénieur à l’ENSIAS. Projets backend, systèmes distribués et MLOps. Stage PFE de six mois à partir de février 2027.">
   <meta name="author" content="Zakariae Jazouli">
 
   <!-- Google Fonts: Plus Jakarta Sans & Inter & JetBrains Mono -->
@@ -12,15 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="theme.js?v=1"></script>
 </head>
 <body>
 
-  <!-- Loading Screen -->
-  <div class="loading-screen" id="loading-screen">
-    <div class="loader-brand"><span class="accent">&lt;</span>Zakariae.Jazouli<span class="accent">/&gt;</span></div>
-    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
-  </div>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
 
   <!-- Grain Texture Overlay -->
   <div class="grain-overlay" aria-hidden="true"></div>
@@ -39,14 +36,17 @@
         <span class="brand-code">/&gt;</span>
       </a>
 
-      <nav class="nav-links" id="nav-menu">
-        <a href="#about" class="nav-link" id="nav-about">À propos</a>
+      <nav class="nav-links" id="nav-menu" aria-label="Navigation principale">
         <a href="#projects" class="nav-link" id="nav-projects">Projets</a>
-        <a href="#architecture" class="nav-link" id="nav-arch">Architecture</a>
         <a href="#experience" class="nav-link" id="nav-exp">Expériences</a>
+        <a href="#architecture" class="nav-link" id="nav-arch">Architecture</a>
+        <a href="#about" class="nav-link" id="nav-about">À propos</a>
         <a href="#skills" class="nav-link" id="nav-skills">Compétences</a>
-        <a href="#video-pitch" class="nav-link" id="nav-video">Pitch Vidéo</a>
+        <a href="#video-pitch" class="nav-link" id="nav-video">Vidéo</a>
         <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+        <a href="assets/CV_Zakariae_Jazouli.pdf" class="nav-link nav-compact-link" download>Télécharger le CV</a>
+        <a href="https://github.com/Ziko145" class="nav-link nav-compact-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/zakariae-jazouli" class="nav-link nav-compact-link">LinkedIn</a>
       </nav>
 
       <div class="nav-actions">
@@ -54,24 +54,24 @@
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="assets/CV_Zakariae_Jazouli.pdf" target="_blank" class="btn btn-outline btn-sm" id="btn-download-cv">
+        <a href="assets/CV_Zakariae_Jazouli.pdf" class="btn btn-outline btn-sm" id="btn-download-cv" download>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>CV (PDF)</span>
         </a>
-        <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-github-nav" title="GitHub">
+        <a href="https://github.com/Ziko145" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-github-nav" aria-label="Profil GitHub" title="GitHub">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
-        <a href="https://linkedin.com/in/zakariae-jazouli" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-linkedin-nav" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/zakariae-jazouli" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-linkedin-nav" aria-label="Profil LinkedIn" title="LinkedIn">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Menu Mobile">
+        <button class="mobile-toggle" id="mobile-menu-toggle" type="button" aria-label="Menu de navigation" aria-controls="nav-menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
       <!-- Cursor Spotlight -->
@@ -79,60 +79,52 @@
       <div class="container hero-container">
         
         <div class="hero-content">
-          <div class="hero-badge animate-fade-in">
-            <img src="assets/logo-ensias.png" alt="ENSIAS Logo" class="hero-school-logo">
-            <span>Élève-Ingénieur en Génie Logiciel • ENSIAS Rabat</span>
+          <div class="hero-badge">
+            <img src="assets/logo-ensias.png" alt="" class="hero-school-logo">
+            <span>Génie logiciel à l’ENSIAS, Rabat</span>
           </div>
 
-          <h1 class="hero-title animate-fade-in-delay-1">
+          <h1 class="hero-title">
             Zakariae <span class="animated-gradient">Jazouli</span>
           </h1>
 
-          <p class="hero-subtitle animate-fade-in-delay-2">
-            Software Engineer <span class="divider-slash">/</span> Backend <span class="divider-slash">/</span> Systèmes Distribués &amp; MLOps
+          <p class="hero-subtitle">
+            Backend, systèmes distribués et MLOps
           </p>
 
-          <p class="hero-pitch animate-fade-in-delay-3">
-            Concepteur de backends résilients, de moteurs de données et d'infrastructures Cloud. Deux expériences significatives en production chez <strong>Autoroutes du Maroc (ADM)</strong> et <strong>Holding Al Omrane</strong>, alliées à la passion d'implémenter les systèmes complexes depuis les premiers principes.
+          <p class="hero-pitch">
+            Élève-ingénieur en dernière année, je recherche un <strong>stage PFE de six mois à partir de février 2027</strong>. J’ai développé un pipeline de détection d’anomalies pour Autoroutes du Maroc et optimisé le suivi des chantiers chez Al Omrane.
           </p>
 
-          <div class="hero-actions animate-fade-in-delay-4">
+          <div class="hero-actions">
             <a href="#projects" class="btn btn-primary" id="hero-btn-projects">
-              <span>Explorer les Projets</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <span>Voir mes projets</span>
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a href="#video-pitch" class="btn btn-glass" id="hero-btn-video">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              <span>Voir le Pitch Vidéo</span>
-            </a>
-            <a href="#contact" class="btn btn-outline" id="hero-btn-contact">
-              <span>Me Contacter</span>
+            <a href="assets/CV_Zakariae_Jazouli.pdf" class="btn btn-outline" id="hero-btn-cv" download>
+              <span>Télécharger mon CV</span>
             </a>
           </div>
 
           <!-- Quick Metrics Bar -->
-          <div class="hero-stats animate-fade-in-delay-5">
+          <div class="hero-stats">
             <div class="stat-card">
               <span class="stat-number">2</span>
-              <span class="stat-label">Stages en Production (ADM &amp; Al Omrane)</span>
+              <span class="stat-label">Stages en entreprise</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">15K+</span>
-              <span class="stat-label">Événements capteurs/jour traités (ADM)</span>
+              <span class="stat-number">11 741</span>
+              <span class="stat-label">Alarmes historiques validées (ADM)</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">&lt; 100ms</span>
-              <span class="stat-label">Latence p95 API inférence XGBoost</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-number">4</span>
-              <span class="stat-label">Certifications (AWS, Cisco, DataCamp)</span>
+              <span class="stat-number">−42 %</span>
+              <span class="stat-label">Temps de calcul et d’affichage WBS (Al Omrane)</span>
             </div>
           </div>
         </div>
 
         <!-- Hero Terminal Showcase -->
-        <div class="hero-visual animate-fade-in-delay-3">
+        <div class="hero-visual" aria-hidden="true">
           <div class="terminal-window">
             <div class="terminal-header">
               <div class="terminal-dots">
@@ -140,26 +132,16 @@
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
               </div>
-              <span class="terminal-title">zakariae@ensias-system: ~/profile</span>
+              <span class="terminal-title">zakariae@ensias: ~/portfolio</span>
             </div>
             <div class="terminal-body">
-              <p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat engineer_manifest.json</span></p>
+              <p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat profil.json</span></p>
               <pre class="term-output"><code>{
-  <span class="json-key">"engineer"</span>: <span class="json-str">"Zakariae Jazouli"</span>,
-  <span class="json-key">"school"</span>: <span class="json-str">"ENSIAS (Promotion 2027)"</span>,
-  <span class="json-key">"background"</span>: <span class="json-str">"CPGE MPSI/MP (Concours National Commun)"</span>,
-  <span class="json-key">"specialization"</span>: [
-    <span class="json-str">"High-Performance Backend (Java / C# / Python)"</span>,
-    <span class="json-str">"Distributed Systems & Vector Clocks"</span>,
-    <span class="json-str">"Production MLOps & Stream Ingestion"</span>,
-    <span class="json-str">"Cloud Infrastructure (AWS, Kubernetes, Docker)"</span>
-  ],
-  <span class="json-key">"target_pfe_role"</span>: <span class="json-str">"Software Engineer (Backend & Cloud)"</span>,
-  <span class="json-key">"preferred_targets"</span>: [<span class="json-str">"BCG X"</span>, <span class="json-str">"Oracle"</span>, <span class="json-str">"Ostorlab"</span>],
-  <span class="json-key">"status"</span>: <span class="json-str">"Ready to deploy high-impact code 🚀"</span>
+  <span class="json-key">"promotion"</span>: <span class="json-str">"ENSIAS 2027"</span>,
+  <span class="json-key">"langages"</span>: [<span class="json-str">"Java"</span>, <span class="json-str">"C#"</span>, <span class="json-str">"Python"</span>],
+  <span class="json-key">"domaines"</span>: [<span class="json-str">"Backend"</span>, <span class="json-str">"Systèmes"</span>, <span class="json-str">"MLOps"</span>],
+  <span class="json-key">"pfe"</span>: <span class="json-str">"février – juillet 2027"</span>
 }</code></pre>
-              <p class="term-line terminal-cursor"><span class="term-prompt">$</span> <span class="term-cmd">curl -s https://api.zakariae.dev/healthcheck</span></p>
-              <p class="term-response"><span class="badge-status-ok">[200 OK]</span> Systems nominal. All pipelines active.</p>
             </div>
           </div>
         </div>
@@ -167,86 +149,38 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about-section" id="about">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">À propos &amp; Vision</span>
-          <h2 class="section-title">Comprendre sous le capot pour <span class="animated-gradient">bâtir du solide</span></h2>
-          <p class="section-desc">Mon parcours est guidé par une curiosité technique profonde et le refus des boîtes noires.</p>
-        </div>
-
-        <div class="about-grid reveal-group">
-          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:0">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h3>Fondations Mathématiques &amp; Algorithmiques</h3>
-            <p>
-              Issu des <strong>Classes Préparatoires aux Grandes Écoles (CPGE MP)</strong> à First Prépa Meknès et admis à l'<strong>ENSIAS</strong> via le Concours National Commun, j'ai développé une grande rigueur analytique, une endurance intellectuelle et un goût prononcé pour l'optimisation algorithmique.
-            </p>
-          </div>
-
-          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:1">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-            </div>
-            <h3>Ingénierie Systèmes &amp; Concurrence</h3>
-            <p>
-              Au-delà de l'assemblage de frameworks, j'aime concevoir des architectures depuis les premiers principes : gestion de mémoire par pages et buffer pools LRU, indexation par arbres B+, ordering causal par horloges vectorielles, et maîtrise fine du multithreading.
-            </p>
-          </div>
-
-          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:2">
-            <div class="card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-            </div>
-            <h3>Pratiques de Production &amp; Résilience</h3>
-            <p>
-              Éprouvé sur le terrain lors de mes stages chez <strong>Autoroutes du Maroc (ADM)</strong> et <strong>Holding Al Omrane</strong> : livraison de code testé, astreintes opérationnelles nocturnes, réduction des fausses alertes, monitoring de métriques et pipelines CI/CD conteneurisés.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Showcase (D:/Projects) -->
+    <!-- Projects -->
     <section class="section projects-section" id="projects">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Projets d'Ingénierie</span>
-          <h2 class="section-title">Réalisations &amp; Code de Production <span class="animated-gradient">(D:\Projects)</span></h2>
-          <p class="section-desc">Sélection de systèmes réels déployés en entreprise, plateformes cloud et moteurs logiciels développés from scratch.</p>
+          <h2 class="section-title">Projets <span class="animated-gradient">sélectionnés</span></h2>
         </div>
 
         <!-- Filter Bar -->
-        <div class="filter-bar" id="project-filters">
-          <button class="filter-btn active" data-filter="all">Tous les Projets</button>
-          <button class="filter-btn" data-filter="production">🏢 Entreprise &amp; Prod</button>
-          <button class="filter-btn" data-filter="systems">⚙️ Systèmes &amp; Core</button>
-          <button class="filter-btn" data-filter="mlops">🧠 IA &amp; MLOps</button>
-          <button class="filter-btn" data-filter="fullstack">💻 Cloud &amp; Full-Stack</button>
+        <div class="filter-bar" id="project-filters" role="group" aria-label="Filtrer les projets">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Tous les projets</button>
+          <button class="filter-btn" data-filter="production" aria-pressed="false">En entreprise</button>
+          <button class="filter-btn" data-filter="systems" aria-pressed="false">Systèmes</button>
+          <button class="filter-btn" data-filter="mlops" aria-pressed="false">MLOps</button>
+          <button class="filter-btn" data-filter="fullstack" aria-pressed="false">Cloud et full-stack</button>
         </div>
 
         <!-- Projects Grid -->
         <div class="projects-grid" id="projects-grid-container">
 
-          <!-- Project 1: ADM 2026 -->
+          <!-- ADM 2026 -->
           <article class="project-card glass-panel glow-card reveal" data-category="production mlops systems" id="card-adm">
             <div class="project-badge-top">
-              <span class="badge-tag production">Production • ADM</span>
-              <span class="badge-metric">-35% fausses alertes</span>
+              <span class="badge-tag production">Stage • Autoroutes du Maroc</span>
+              <span class="badge-metric">42 ms en moyenne sur flux simulé</span>
             </div>
             <div class="project-image-container">
               <img src="assets/adm-dashboard.png" alt="Tableau de bord ADM 2026" class="project-img" loading="lazy">
-              <div class="project-overlay">
-                <button class="btn btn-sm btn-primary view-project-btn" data-project="adm">Voir les Détails</button>
-              </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">ADM 2026 — Plateforme Temps Réel de Détection d'Anomalies Péages</h3>
+              <h3 class="project-title">Détection d’anomalies aux péages</h3>
               <p class="project-summary">
-                Architecture microservices automatisée pour <strong>Autoroutes du Maroc (ADM)</strong> filtrant 15 000+ événements capteurs quotidiens en temps réel via XGBoost, clustering HDBSCAN, inférence SHAP et Spring Boot Resilience4j.
+                J’ai conçu un pipeline Spring Boot et FastAPI qui trie les alertes et conserve l’alarme si le modèle est indisponible. Le prototype a traité un flux simulé en 42 ms en moyenne de bout en bout.
               </p>
               <div class="project-tags">
                 <span class="tag">Java 21</span>
@@ -259,15 +193,51 @@
               </div>
               <div class="project-footer">
                 <div class="project-kpis">
-                  <span><strong>p95 &lt; 100ms</strong> latence</span>
-                  <span><strong>11.7K+</strong> alarmes validées</span>
+                  <span><strong>11 741</strong> alarmes historiques validées</span>
                 </div>
-                <button class="btn btn-outline btn-sm view-project-btn" data-project="adm">Détails &amp; Schémas &rarr;</button>
+                <a class="btn btn-outline btn-sm" href="projects/adm.html" aria-label="Lire l’étude de cas Autoroutes du Maroc">Lire l’étude de cas <span aria-hidden="true">→</span></a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2: Atlas 360 -->
+          <!-- Project Monitoring (Al Omrane) -->
+          <article class="project-card glass-panel glow-card reveal" data-category="production fullstack" id="card-monitoring">
+            <div class="project-badge-top">
+              <span class="badge-tag production">Entreprise • Al Omrane</span>
+              <span class="badge-metric">−42 % sur le calcul et l’affichage WBS</span>
+            </div>
+            <div class="project-image-container">
+              <div class="project-img-placeholder csharp-gradient wbs-preview" aria-hidden="true">
+                <pre><code><span class="wbs-preview-title">Structure des travaux</span>
+Projet
+└─ Contrat
+   └─ Prestation
+      └─ Sous-prestation</code></pre>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Suivi des chantiers chez Al Omrane</h3>
+              <p class="project-summary">
+                J’ai développé des API de suivi et optimisé les requêtes SQL qui reconstruisent la hiérarchie des chantiers. Le calcul et l’affichage de cette hiérarchie ont pris 42 % de temps en moins.
+              </p>
+              <div class="project-tags">
+                <span class="tag">ASP.NET Core 8</span>
+                <span class="tag">C# 12</span>
+                <span class="tag">MS SQL Server</span>
+                <span class="tag">EF Core 8</span>
+                <span class="tag">Vue.js 3</span>
+                <span class="tag">ApexCharts</span>
+              </div>
+              <div class="project-footer">
+                <div class="project-kpis">
+                  <span><strong>50+</strong> projets suivis</span>
+                </div>
+                <a class="btn btn-outline btn-sm" href="projects/al-omrane.html" aria-label="Lire l’étude de cas Al Omrane">Lire l’étude de cas <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Atlas 360 -->
           <article class="project-card glass-panel glow-card reveal" data-category="fullstack" id="card-atlas">
             <div class="project-badge-top">
               <span class="badge-tag fullstack">Next.js 16 • Stripe • 360°</span>
@@ -275,9 +245,6 @@
             </div>
             <div class="project-image-container">
               <img src="assets/atlas-hero.png" alt="Atlas 360 Marketplace" class="project-img" loading="lazy">
-              <div class="project-overlay">
-                <button class="btn btn-sm btn-primary view-project-btn" data-project="atlas">Voir les Détails</button>
-              </div>
             </div>
             <div class="project-content">
               <h3 class="project-title">Atlas 360 — Marketplace &amp; Itinéraires Marocains Panoramiques</h3>
@@ -303,7 +270,7 @@
             </div>
           </article>
 
-          <!-- Project 3: YouthChallenge -->
+          <!-- YouthChallenge -->
           <article class="project-card glass-panel glow-card reveal" data-category="fullstack systems" id="card-youth">
             <div class="project-badge-top">
               <span class="badge-tag systems">JEE • Spring Boot • K8s</span>
@@ -311,9 +278,6 @@
             </div>
             <div class="project-image-container">
               <img src="assets/youthchallenge-arch.png" alt="Architecture YouthChallenge" class="project-img" loading="lazy">
-              <div class="project-overlay">
-                <button class="btn btn-sm btn-primary view-project-btn" data-project="youth">Voir les Détails</button>
-              </div>
             </div>
             <div class="project-content">
               <h3 class="project-title">YouthChallenge — Plateforme Gamifiée Scalable Cloud</h3>
@@ -338,46 +302,7 @@
             </div>
           </article>
 
-          <!-- Project 4: Project Monitoring (Al Omrane) -->
-          <article class="project-card glass-panel glow-card reveal" data-category="production fullstack" id="card-monitoring">
-            <div class="project-badge-top">
-              <span class="badge-tag production">Entreprise • Al Omrane</span>
-              <span class="badge-metric">+80M$ Supervisés</span>
-            </div>
-            <div class="project-image-container">
-              <div class="project-img-placeholder csharp-gradient">
-                <span class="placeholder-icon">📊</span>
-                <span class="placeholder-title">Al Omrane Project Monitoring</span>
-                <span class="placeholder-sub">ASP.NET Core 8 / C# 12 &bull; Vue 3 &bull; SQL Server</span>
-              </div>
-              <div class="project-overlay">
-                <button class="btn btn-sm btn-primary view-project-btn" data-project="monitoring">Voir les Détails</button>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Plateforme Centralisée de Suivi de Projets (Holding Al Omrane)</h3>
-              <p class="project-summary">
-                APIs REST haut débit développées en ASP.NET Core 8 pour superviser 50+ projets nationaux de génie civil. Moteur d'agrégation de 150+ KPIs opérationnels et optimisation de requêtes hiérarchiques WBS sous SQL Server / EF Core 8.
-              </p>
-              <div class="project-tags">
-                <span class="tag">ASP.NET Core 8</span>
-                <span class="tag">C# 12</span>
-                <span class="tag">MS SQL Server</span>
-                <span class="tag">EF Core 8</span>
-                <span class="tag">Vue.js 3</span>
-                <span class="tag">ApexCharts</span>
-              </div>
-              <div class="project-footer">
-                <div class="project-kpis">
-                  <span><strong>-42%</strong> temps calcul WBS</span>
-                  <span><strong>100+</strong> utilisateurs internes</span>
-                </div>
-                <button class="btn btn-outline btn-sm view-project-btn" data-project="monitoring">Détails &amp; Schémas &rarr;</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 5: Mini Moteur de Requêtes Java -->
+          <!-- Mini Moteur de Requêtes Java -->
           <article class="project-card glass-panel glow-card reveal" data-category="systems" id="card-sqlengine">
             <div class="project-badge-top">
               <span class="badge-tag systems">Core CS • From Scratch</span>
@@ -388,9 +313,6 @@
                 <span class="placeholder-icon">🗄️</span>
                 <span class="placeholder-title">Java Relational Query Engine</span>
                 <span class="placeholder-sub">Storage &bull; B+ Tree Index &bull; Cost-based Optimizer</span>
-              </div>
-              <div class="project-overlay">
-                <button class="btn btn-sm btn-primary view-project-btn" data-project="sqlengine">Voir les Détails</button>
               </div>
             </div>
             <div class="project-content">
@@ -415,7 +337,7 @@
             </div>
           </article>
 
-          <!-- Project 6: Système de Diffusion Causale Distribué -->
+          <!-- Système de Diffusion Causale Distribué -->
           <article class="project-card glass-panel glow-card reveal" data-category="systems" id="card-causal">
             <div class="project-badge-top">
               <span class="badge-tag systems">Systèmes Distribués</span>
@@ -426,9 +348,6 @@
                 <span class="placeholder-icon">⚡</span>
                 <span class="placeholder-title">Causal Broadcast System</span>
                 <span class="placeholder-sub">TCP Sockets &bull; Vector Clocks &bull; Multithreading</span>
-              </div>
-              <div class="project-overlay">
-                <button class="btn btn-sm btn-primary view-project-btn" data-project="causal">Voir les Détails</button>
               </div>
             </div>
             <div class="project-content">
@@ -457,6 +376,101 @@
       </div>
     </section>
 
+    <!-- Experience & Education Timeline -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Parcours &amp; Expériences</span>
+          <h2 class="section-title">Expérience de terrain &amp; <span class="animated-gradient">Formation d'Excellence</span></h2>
+          <p class="section-desc">Des classes préparatoires intensives aux responsabilités d'ingénierie en entreprise.</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- ADM Stage -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">Juillet – Septembre 2025</span>
+                  <span class="timeline-badge">Stage Ingénieur 2A</span>
+                </div>
+                <img src="assets/logo-adm.png" alt="ADM Logo" class="timeline-company-logo">
+              </div>
+              <h3 class="timeline-role">Stagiaire Ingénieur Logiciel &amp; MLOps</h3>
+              <h4 class="timeline-company">Autoroutes du Maroc Groupe (ADM) • Rabat</h4>
+              <ul class="timeline-bullets">
+                <li>Développement d'un backend en <strong>Java / Spring Boot</strong> pour l'ingestion et la persistance en temps réel des anomalies d'équipements autoroutiers.</li>
+                <li>Conception d’un pipeline d’inférence <strong>Python (XGBoost, FastAPI)</strong> et évaluation du filtrage sur 11 741 alarmes historiques validées.</li>
+                <li>Mise en place de la conteneurisation <strong>Docker</strong> et de l'automatisation <strong>CI/CD</strong>, réduisant les déploiements de plusieurs jours à moins de 20 minutes.</li>
+                <li>Participation aux astreintes opérationnelles et diagnostic d'incidents nocturnes via logs et métriques.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Al Omrane Stage -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">Juin – Juillet 2025</span>
+                  <span class="timeline-badge">Stage Ingénieur 1A</span>
+                </div>
+              </div>
+              <h3 class="timeline-role">Stagiaire Ingénieur Logiciel Full-Stack</h3>
+              <h4 class="timeline-company">Holding Al Omrane • Rabat</h4>
+              <ul class="timeline-bullets">
+                <li>Conception et livraison de la Plateforme Centralisée de Suivi de Projets supervisant 50+ chantiers nationaux (+80M$ de portefeuille).</li>
+                <li>Développement d'APIs REST en <strong>ASP.NET Core 8 / C# 12</strong> avec moteur d'agrégation de 150+ métriques opérationnelles.</li>
+                <li>Optimisation de requêtes SQL et bulk inserts sous <strong>EF Core 8 / SQL Server</strong> (gain de 42% sur le temps de calcul hiérarchique).</li>
+                <li>Création de tableaux de bord interactifs en <strong>Vue.js 3</strong> utilisés par plus de 100 collaborateurs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ENSIAS -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2024 – 2027</span>
+                  <span class="timeline-badge academic">École d'Ingénieurs</span>
+                </div>
+                <img src="assets/logo-ensias.png" alt="ENSIAS Logo" class="timeline-company-logo">
+              </div>
+              <h3 class="timeline-role">Diplôme d’Ingénieur d’État en Génie Logiciel</h3>
+              <h4 class="timeline-company">École Nationale Supérieure d’Informatique et d’Analyse des Systèmes (ENSIAS) • Rabat</h4>
+              <p class="timeline-desc">
+                Dernière année d'ingénierie (2026-2027). Cursus d'excellence couvrant les systèmes distribués, l'algorithmique avancée, les systèmes d'exploitation, la concurrence, les bases de données et la recherche opérationnelle.
+              </p>
+            </div>
+          </div>
+
+          <!-- CPGE MP -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-header">
+                <div class="timeline-meta">
+                  <span class="timeline-period">2022 – 2024</span>
+                  <span class="timeline-badge academic">Classes Préparatoires</span>
+                </div>
+              </div>
+              <h3 class="timeline-role">Classes Préparatoires aux Grandes Écoles (CPGE) — MPSI / MP</h3>
+              <h4 class="timeline-company">CPGE First Prépa • Meknès</h4>
+              <p class="timeline-desc">
+                Deux années intensives en Mathématiques avancées, Physique et Informatique algorithmique. Admis à l'ENSIAS via le <strong>Concours National Commun (CNC)</strong>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Architecture & Systems Lab (Interactive Tabbed Section) -->
     <section class="section architecture-section" id="architecture">
       <div class="container">
@@ -467,20 +481,20 @@
         </div>
 
         <div class="arch-lab glass-panel reveal">
-          <div class="arch-tabs">
-            <button class="arch-tab-btn active" data-tab="tab-adm">
+          <div class="arch-tabs" role="group" aria-label="Schémas d’architecture">
+            <button class="arch-tab-btn active" data-tab="tab-adm" aria-controls="tab-adm" aria-pressed="true">
               <span class="tab-icon">⚡</span>
               <span>Pipeline MLOps ADM</span>
             </button>
-            <button class="arch-tab-btn" data-tab="tab-sql">
+            <button class="arch-tab-btn" data-tab="tab-sql" aria-controls="tab-sql" aria-pressed="false">
               <span class="tab-icon">🗄️</span>
               <span>Moteur SQL &amp; B+ Tree</span>
             </button>
-            <button class="arch-tab-btn" data-tab="tab-causal">
+            <button class="arch-tab-btn" data-tab="tab-causal" aria-controls="tab-causal" aria-pressed="false">
               <span class="tab-icon">🌐</span>
               <span>Causalité Distribuée</span>
             </button>
-            <button class="arch-tab-btn" data-tab="tab-cloud">
+            <button class="arch-tab-btn" data-tab="tab-cloud" aria-controls="tab-cloud" aria-pressed="false">
               <span class="tab-icon">☁️</span>
               <span>Cloud &amp; Kubernetes</span>
             </button>
@@ -493,13 +507,13 @@
                 <div class="arch-pane-text">
                   <h3>Pipeline Temps Réel &amp; Circuit Breaker (Autoroutes du Maroc)</h3>
                   <p>
-                    Face à 15 000 événements quotidiens provenant des capteurs autoroutiers, le défi était d'éliminer les fausses alertes sans jamais manquer un incident réel ni bloquer les opérateurs.
+                    Le pipeline filtre les fausses alertes des capteurs autoroutiers tout en gardant les alarmes disponibles pour les opérateurs en cas de panne du modèle.
                   </p>
                   <ul class="arch-feature-list">
                     <li><strong>Ingestion asynchrone :</strong> Flux JSON consommés depuis Apache Kafka par le backend Spring Boot.</li>
                     <li><strong>Inférence haute performance :</strong> Requête POST vers le microservice FastAPI/XGBoost. Seuil de confiance &ge; 0.90 pour la suppression automatique.</li>
                     <li><strong>Explicabilité XAI :</strong> Intégration de SHAP TreeExplainer pour fournir l'attribution exacte des variables explicatives de chaque décision.</li>
-                    <li><strong>Résilience à toute épreuve :</strong> Circuit Breaker Resilience4j : en cas de timeout du modèle (&gt; 100ms), fallback automatique en <code>VALID_ALARM</code> pour préserver la sécurité.</li>
+                    <li><strong>Repli en cas de panne :</strong> si FastAPI dépasse son délai de réponse ou devient indisponible, Resilience4j maintient l’alarme dans le circuit de traitement.</li>
                   </ul>
                   <div class="arch-actions">
                     <img src="assets/logo-adm.png" alt="ADM" class="partner-logo">
@@ -615,97 +629,45 @@
       </div>
     </section>
 
-    <!-- Experience & Education Timeline -->
-    <section class="section experience-section" id="experience">
+    <!-- About Section -->
+    <section class="section about-section" id="about">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Parcours &amp; Expériences</span>
-          <h2 class="section-title">Expérience de terrain &amp; <span class="animated-gradient">Formation d'Excellence</span></h2>
-          <p class="section-desc">Des classes préparatoires intensives aux responsabilités d'ingénierie en entreprise.</p>
+          <span class="section-tag">À propos &amp; Vision</span>
+          <h2 class="section-title">Comprendre sous le capot pour <span class="animated-gradient">bâtir du solide</span></h2>
+          <p class="section-desc">Mon parcours est guidé par une curiosité technique profonde et le refus des boîtes noires.</p>
         </div>
 
-        <div class="timeline-container">
-
-          <!-- ADM Stage -->
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Juillet – Septembre 2025</span>
-                  <span class="timeline-badge">Stage Ingénieur 2A</span>
-                </div>
-                <img src="assets/logo-adm.png" alt="ADM Logo" class="timeline-company-logo">
-              </div>
-              <h3 class="timeline-role">Stagiaire Ingénieur Logiciel &amp; MLOps</h3>
-              <h4 class="timeline-company">Autoroutes du Maroc Groupe (ADM) • Rabat</h4>
-              <ul class="timeline-bullets">
-                <li>Développement d'un backend en <strong>Java / Spring Boot</strong> pour l'ingestion et la persistance en temps réel des anomalies d'équipements autoroutiers.</li>
-                <li>Conception d'un pipeline de détection d'anomalies en <strong>Python (XGBoost, FastAPI)</strong> traitant 15 000+ événements/jour (-35% de fausses alertes).</li>
-                <li>Mise en place de la conteneurisation <strong>Docker</strong> et de l'automatisation <strong>CI/CD</strong>, réduisant les déploiements de plusieurs jours à moins de 20 minutes.</li>
-                <li>Participation aux astreintes opérationnelles et diagnostic d'incidents nocturnes via logs et métriques.</li>
-              </ul>
+        <div class="about-grid">
+          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:0">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             </div>
+            <h3>Fondations Mathématiques &amp; Algorithmiques</h3>
+            <p>
+              Issu des <strong>Classes Préparatoires aux Grandes Écoles (CPGE MP)</strong> à First Prépa Meknès et admis à l'<strong>ENSIAS</strong> via le Concours National Commun, j'ai développé une grande rigueur analytique, une endurance intellectuelle et un goût prononcé pour l'optimisation algorithmique.
+            </p>
           </div>
 
-          <!-- Al Omrane Stage -->
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="timeline-meta">
-                  <span class="timeline-period">Juin – Juillet 2025</span>
-                  <span class="timeline-badge">Stage Ingénieur 1A</span>
-                </div>
-              </div>
-              <h3 class="timeline-role">Stagiaire Ingénieur Logiciel Full-Stack</h3>
-              <h4 class="timeline-company">Holding Al Omrane • Rabat</h4>
-              <ul class="timeline-bullets">
-                <li>Conception et livraison de la Plateforme Centralisée de Suivi de Projets supervisant 50+ chantiers nationaux (+80M$ de portefeuille).</li>
-                <li>Développement d'APIs REST en <strong>ASP.NET Core 8 / C# 12</strong> avec moteur d'agrégation de 150+ métriques opérationnelles.</li>
-                <li>Optimisation de requêtes SQL et bulk inserts sous <strong>EF Core 8 / SQL Server</strong> (gain de 42% sur le temps de calcul hiérarchique).</li>
-                <li>Création de tableaux de bord interactifs en <strong>Vue.js 3</strong> utilisés par plus de 100 collaborateurs.</li>
-              </ul>
+          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:1">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
             </div>
+            <h3>Ingénierie Systèmes &amp; Concurrence</h3>
+            <p>
+              Au-delà de l'assemblage de frameworks, j'aime concevoir des architectures depuis les premiers principes : gestion de mémoire par pages et buffer pools LRU, indexation par arbres B+, ordering causal par horloges vectorielles, et maîtrise fine du multithreading.
+            </p>
           </div>
 
-          <!-- ENSIAS -->
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="timeline-meta">
-                  <span class="timeline-period">2024 – 2027</span>
-                  <span class="timeline-badge academic">École d'Ingénieurs</span>
-                </div>
-                <img src="assets/logo-ensias.png" alt="ENSIAS Logo" class="timeline-company-logo">
-              </div>
-              <h3 class="timeline-role">Diplôme d’Ingénieur d’État en Génie Logiciel</h3>
-              <h4 class="timeline-company">École Nationale Supérieure d’Informatique et d’Analyse des Systèmes (ENSIAS) • Rabat</h4>
-              <p class="timeline-desc">
-                Dernière année d'ingénierie (2026-2027). Cursus d'excellence couvrant les systèmes distribués, l'algorithmique avancée, les systèmes d'exploitation, la concurrence, les bases de données et la recherche opérationnelle.
-              </p>
+          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:2">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
             </div>
+            <h3>Pratiques de Production &amp; Résilience</h3>
+            <p>
+              Éprouvé sur le terrain lors de mes stages chez <strong>Autoroutes du Maroc (ADM)</strong> et <strong>Holding Al Omrane</strong> : livraison de code testé, astreintes opérationnelles nocturnes, réduction des fausses alertes, monitoring de métriques et pipelines CI/CD conteneurisés.
+            </p>
           </div>
-
-          <!-- CPGE MP -->
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-panel">
-              <div class="timeline-header">
-                <div class="timeline-meta">
-                  <span class="timeline-period">2022 – 2024</span>
-                  <span class="timeline-badge academic">Classes Préparatoires</span>
-                </div>
-              </div>
-              <h3 class="timeline-role">Classes Préparatoires aux Grandes Écoles (CPGE) — MPSI / MP</h3>
-              <h4 class="timeline-company">CPGE First Prépa • Meknès</h4>
-              <p class="timeline-desc">
-                Deux années intensives en Mathématiques avancées, Physique et Informatique algorithmique. Admis à l'ENSIAS via le <strong>Concours National Commun (CNC)</strong>.
-              </p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -819,48 +781,22 @@
     <section class="section video-section" id="video-pitch">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Présentation Multimédia</span>
-          <h2 class="section-title">Pitch Vidéo &amp; <span class="animated-gradient">Démonstrateur ePortfolio</span></h2>
-          <p class="section-desc">Vidéo de présentation synthétique de mon profil, de mes projets majeurs et de mes motivations pour le PFE 2027.</p>
+          <h2 class="section-title">Comprendre <span class="animated-gradient">l’ePortfolio</span></h2>
         </div>
 
         <div class="video-showcase glass-panel reveal">
           <div class="video-player-wrapper">
-            <video id="portfolio-video" controls poster="assets/adm-dashboard.png">
+            <video id="portfolio-video" controls playsinline preload="none" poster="assets/eportfolio-poster.jpg" aria-label="Ressource vidéo sur l’ePortfolio">
               <source src="assets/ePortfolio_Presentation.mp4" type="video/mp4">
-              Votre navigateur ne prend pas en charge la lecture vidéo HTML5.
+              <track kind="captions" src="assets/eportfolio-fr.vtt" srclang="fr" label="Français">
+              <a href="assets/ePortfolio_Presentation.mp4">Ouvrir la vidéo</a>
             </video>
           </div>
 
           <div class="video-info">
-            <div class="video-meta-badge">Vidéo Officielle du ePortfolio • Format Synthétique</div>
-            <h3>Zakariae Jazouli — Pitch Ingénieur &amp; Démonstration de Projets</h3>
-            <p>
-              Dans cette vidéo, je présente de manière directe et concrète mon parcours entre les classes préparatoires et l'ENSIAS, les responsabilités tenues lors de mes stages chez Autoroutes du Maroc et Al Omrane, ainsi que la démonstration en direct de mes applications logicielles.
-            </p>
-            <div class="video-highlights">
-              <div class="highlight-item">
-                <span class="hl-time">01</span>
-                <div>
-                  <strong>Fondamentaux &amp; Parcours</strong>
-                  <p>CPGE MP &bull; ENSIAS Génie Logiciel</p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <span class="hl-time">02</span>
-                <div>
-                  <strong>Projets en Production</strong>
-                  <p>ADM 2026 MLOps &bull; Al Omrane ASP.NET Core</p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <span class="hl-time">03</span>
-                <div>
-                  <strong>Objectif de Carrière</strong>
-                  <p>Stage PFE 2027 &bull; Software Engineer</p>
-                </div>
-              </div>
-            </div>
+            <div class="video-meta-badge">2 min 07 · Sous-titres français</div>
+            <h3>Ressource de cours</h3>
+            <p>Une introduction aux usages de l’ePortfolio et aux rubriques qui permettent de présenter un parcours, des réalisations et un projet professionnel.</p>
           </div>
         </div>
       </div>
@@ -872,7 +808,7 @@
         <div class="section-header reveal">
           <span class="section-tag">Me Contacter</span>
           <h2 class="section-title">Prêt à collaborer pour le <span class="animated-gradient">PFE 2027</span></h2>
-          <p class="section-desc">Ouvert aux opportunités de stage de fin d'études de 6 mois et aux échanges techniques.</p>
+          <p class="section-desc">Disponible à partir de février 2027 pour un stage de fin d’études de six mois.</p>
         </div>
 
         <div class="contact-card glass-panel reveal">
@@ -933,17 +869,13 @@
   </main>
 
   <!-- Interactive Project Modal -->
-  <div class="modal-backdrop" id="project-modal">
-    <div class="modal-container" id="modal-content">
-      <button class="modal-close" id="modal-close-btn" aria-label="Fermer la modal">&times;</button>
-      <div id="modal-body-dynamic">
-        <!-- Dynamically injected by app.js -->
-      </div>
-    </div>
-  </div>
+  <dialog class="modal-container" id="project-modal" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close-btn" type="button" aria-label="Fermer les détails du projet" autofocus>&times;</button>
+    <div id="modal-body-dynamic"></div>
+  </dialog>
 
   <!-- Toast Notification -->
-  <div class="toast" id="toast">Copié dans le presse-papier !</div>
+  <div class="toast" id="toast" role="status"></div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -953,7 +885,7 @@
           <div class="footer-brand-name"><span class="accent">&lt;</span>Zakariae.Jazouli<span class="accent">/&gt;</span></div>
           <p>Élève-ingénieur en Génie Logiciel à l'ENSIAS. Concepteur de backends résilients, systèmes distribués et architectures Cloud.</p>
           <div class="social-links">
-            <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+            <a href="https://github.com/Ziko145" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil GitHub" title="GitHub">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </a>
             <a href="https://linkedin.com/in/zakariae-jazouli" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
@@ -978,9 +910,9 @@
           <h4>Ressources</h4>
           <ul>
             <li><a href="assets/CV_Zakariae_Jazouli.pdf" target="_blank">Télécharger le CV</a></li>
-            <li><a href="#video-pitch">Pitch Vidéo</a></li>
+            <li><a href="#video-pitch">Vidéo sur l’ePortfolio</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/Ziko145" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </div>
       </div>
@@ -991,6 +923,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=4"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>
