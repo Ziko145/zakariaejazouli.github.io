@@ -376,6 +376,12 @@ html.light #btn-github-nav {
   background: rgba(0, 0, 0, 0.04) !important;
 }
 
+html.light #btn-linkedin-nav {
+  color: #1d1d1f !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
 html.light #theme-toggle-btn {
   color: #1d1d1f !important;
   border-color: rgba(0, 0, 0, 0.12) !important;

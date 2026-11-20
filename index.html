@@ -12,9 +12,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loader-brand"><span class="accent">&lt;</span>Zakariae.Jazouli<span class="accent">/&gt;</span></div>
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- Grain Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
 
   <!-- Background Ambient Glows -->
   <div class="ambient-glow glow-top"></div>
@@ -52,6 +61,9 @@
         <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-github-nav" title="GitHub">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
         </a>
+        <a href="https://linkedin.com/in/zakariae-jazouli" target="_blank" rel="noopener noreferrer" class="btn btn-icon" id="btn-linkedin-nav" title="LinkedIn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
         <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Menu Mobile">
           <span></span><span></span><span></span>
         </button>
@@ -62,6 +74,8 @@
   <main>
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
+      <!-- Cursor Spotlight -->
+      <div class="hero-spotlight" aria-hidden="true"></div>
       <div class="container hero-container">
         
         <div class="hero-content">
@@ -71,7 +85,7 @@
           </div>
 
           <h1 class="hero-title animate-fade-in-delay-1">
-            Zakariae <span class="gradient-text">Jazouli</span>
+            Zakariae <span class="animated-gradient">Jazouli</span>
           </h1>
 
           <p class="hero-subtitle animate-fade-in-delay-2">
@@ -156,14 +170,14 @@
     <!-- About Section -->
     <section class="section about-section" id="about">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">À propos &amp; Vision</span>
-          <h2 class="section-title">Comprendre sous le capot pour <span class="gradient-text">bâtir du solide</span></h2>
+          <h2 class="section-title">Comprendre sous le capot pour <span class="animated-gradient">bâtir du solide</span></h2>
           <p class="section-desc">Mon parcours est guidé par une curiosité technique profonde et le refus des boîtes noires.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-card glass-panel">
+        <div class="about-grid reveal-group">
+          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:0">
             <div class="card-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             </div>
@@ -173,7 +187,7 @@
             </p>
           </div>
 
-          <div class="about-card glass-panel">
+          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:1">
             <div class="card-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
             </div>
@@ -183,7 +197,7 @@
             </p>
           </div>
 
-          <div class="about-card glass-panel">
+          <div class="about-card glass-panel glow-card reveal" style="--reveal-i:2">
             <div class="card-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
             </div>
@@ -199,9 +213,9 @@
     <!-- Projects Showcase (D:/Projects) -->
     <section class="section projects-section" id="projects">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">Projets d'Ingénierie</span>
-          <h2 class="section-title">Réalisations &amp; Code de Production <span class="gradient-text">(D:\Projects)</span></h2>
+          <h2 class="section-title">Réalisations &amp; Code de Production <span class="animated-gradient">(D:\Projects)</span></h2>
           <p class="section-desc">Sélection de systèmes réels déployés en entreprise, plateformes cloud et moteurs logiciels développés from scratch.</p>
         </div>
 
@@ -218,7 +232,7 @@
         <div class="projects-grid" id="projects-grid-container">
 
           <!-- Project 1: ADM 2026 -->
-          <article class="project-card glass-panel" data-category="production mlops systems" id="card-adm">
+          <article class="project-card glass-panel glow-card reveal" data-category="production mlops systems" id="card-adm">
             <div class="project-badge-top">
               <span class="badge-tag production">Production • ADM</span>
               <span class="badge-metric">-35% fausses alertes</span>
@@ -254,7 +268,7 @@
           </article>
 
           <!-- Project 2: Atlas 360 -->
-          <article class="project-card glass-panel" data-category="fullstack" id="card-atlas">
+          <article class="project-card glass-panel glow-card reveal" data-category="fullstack" id="card-atlas">
             <div class="project-badge-top">
               <span class="badge-tag fullstack">Next.js 16 • Stripe • 360°</span>
               <span class="badge-metric">55 Tests automatisés</span>
@@ -290,7 +304,7 @@
           </article>
 
           <!-- Project 3: YouthChallenge -->
-          <article class="project-card glass-panel" data-category="fullstack systems" id="card-youth">
+          <article class="project-card glass-panel glow-card reveal" data-category="fullstack systems" id="card-youth">
             <div class="project-badge-top">
               <span class="badge-tag systems">JEE • Spring Boot • K8s</span>
               <span class="badge-metric">AWS Multi-tiers</span>
@@ -325,7 +339,7 @@
           </article>
 
           <!-- Project 4: Project Monitoring (Al Omrane) -->
-          <article class="project-card glass-panel" data-category="production fullstack" id="card-monitoring">
+          <article class="project-card glass-panel glow-card reveal" data-category="production fullstack" id="card-monitoring">
             <div class="project-badge-top">
               <span class="badge-tag production">Entreprise • Al Omrane</span>
               <span class="badge-metric">+80M$ Supervisés</span>
@@ -364,7 +378,7 @@
           </article>
 
           <!-- Project 5: Mini Moteur de Requêtes Java -->
-          <article class="project-card glass-panel" data-category="systems" id="card-sqlengine">
+          <article class="project-card glass-panel glow-card reveal" data-category="systems" id="card-sqlengine">
             <div class="project-badge-top">
               <span class="badge-tag systems">Core CS • From Scratch</span>
               <span class="badge-metric">B+ Trees &amp; Buffer Pool</span>
@@ -402,7 +416,7 @@
           </article>
 
           <!-- Project 6: Système de Diffusion Causale Distribué -->
-          <article class="project-card glass-panel" data-category="systems" id="card-causal">
+          <article class="project-card glass-panel glow-card reveal" data-category="systems" id="card-causal">
             <div class="project-badge-top">
               <span class="badge-tag systems">Systèmes Distribués</span>
               <span class="badge-metric">Vector Clocks</span>
@@ -446,13 +460,13 @@
     <!-- Architecture & Systems Lab (Interactive Tabbed Section) -->
     <section class="section architecture-section" id="architecture">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">Laboratoire d'Architecture</span>
-          <h2 class="section-title">Comment je conçois les <span class="gradient-text">Systèmes Critiques</span></h2>
+          <h2 class="section-title">Comment je conçois les <span class="animated-gradient">Systèmes Critiques</span></h2>
           <p class="section-desc">Explorez les flux de données, les mécanismes de résilience et les choix de conception de mes projets.</p>
         </div>
 
-        <div class="arch-lab glass-panel">
+        <div class="arch-lab glass-panel reveal">
           <div class="arch-tabs">
             <button class="arch-tab-btn active" data-tab="tab-adm">
               <span class="tab-icon">⚡</span>
@@ -604,16 +618,16 @@
     <!-- Experience & Education Timeline -->
     <section class="section experience-section" id="experience">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">Parcours &amp; Expériences</span>
-          <h2 class="section-title">Expérience de terrain &amp; <span class="gradient-text">Formation d'Excellence</span></h2>
+          <h2 class="section-title">Expérience de terrain &amp; <span class="animated-gradient">Formation d'Excellence</span></h2>
           <p class="section-desc">Des classes préparatoires intensives aux responsabilités d'ingénierie en entreprise.</p>
         </div>
 
         <div class="timeline-container">
 
           <!-- ADM Stage -->
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card glass-panel">
               <div class="timeline-header">
@@ -635,7 +649,7 @@
           </div>
 
           <!-- Al Omrane Stage -->
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card glass-panel">
               <div class="timeline-header">
@@ -656,7 +670,7 @@
           </div>
 
           <!-- ENSIAS -->
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card glass-panel">
               <div class="timeline-header">
@@ -675,7 +689,7 @@
           </div>
 
           <!-- CPGE MP -->
-          <div class="timeline-item">
+          <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card glass-panel">
               <div class="timeline-header">
@@ -699,14 +713,14 @@
     <!-- Skills & Certifications Section -->
     <section class="section skills-section" id="skills">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">Stack &amp; Certifications</span>
-          <h2 class="section-title">Compétences Techniques &amp; <span class="gradient-text">Certifications Validées</span></h2>
+          <h2 class="section-title">Compétences Techniques &amp; <span class="animated-gradient">Certifications Validées</span></h2>
           <p class="section-desc">Technologies maîtrisées et mises en pratique sur des projets réels.</p>
         </div>
 
         <!-- Certifications Row -->
-        <div class="certifications-grid">
+        <div class="certifications-grid reveal">
           <div class="cert-card glass-panel">
             <div class="cert-badge aws">AWS</div>
             <div class="cert-info">
@@ -745,7 +759,7 @@
         </div>
 
         <!-- Tech Matrix Grid -->
-        <div class="skills-matrix">
+        <div class="skills-matrix reveal">
           <div class="skill-category glass-panel">
             <h3><span class="cat-icon">⚡</span> Langages de Programmation</h3>
             <div class="skill-pills">
@@ -804,13 +818,13 @@
     <!-- Video Pitch Section -->
     <section class="section video-section" id="video-pitch">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">Présentation Multimédia</span>
-          <h2 class="section-title">Pitch Vidéo &amp; <span class="gradient-text">Démonstrateur ePortfolio</span></h2>
+          <h2 class="section-title">Pitch Vidéo &amp; <span class="animated-gradient">Démonstrateur ePortfolio</span></h2>
           <p class="section-desc">Vidéo de présentation synthétique de mon profil, de mes projets majeurs et de mes motivations pour le PFE 2027.</p>
         </div>
 
-        <div class="video-showcase glass-panel">
+        <div class="video-showcase glass-panel reveal">
           <div class="video-player-wrapper">
             <video id="portfolio-video" controls poster="assets/adm-dashboard.png">
               <source src="assets/ePortfolio_Presentation.mp4" type="video/mp4">
@@ -855,13 +869,13 @@
     <!-- Contact & Footer Section -->
     <section class="section contact-section" id="contact">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="section-tag">Me Contacter</span>
-          <h2 class="section-title">Prêt à collaborer pour le <span class="gradient-text">PFE 2027</span></h2>
+          <h2 class="section-title">Prêt à collaborer pour le <span class="animated-gradient">PFE 2027</span></h2>
           <p class="section-desc">Ouvert aux opportunités de stage de fin d'études de 6 mois et aux échanges techniques.</p>
         </div>
 
-        <div class="contact-card glass-panel">
+        <div class="contact-card glass-panel reveal">
           <div class="contact-details">
             <div class="contact-item">
               <div class="contact-icon">
@@ -933,14 +947,50 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-content">
-      <p>&copy; 2026 Zakariae Jazouli. Conçu pour le ePortfolio ENSIAS &bull; Code disponible sur <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-      <div class="footer-links">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name"><span class="accent">&lt;</span>Zakariae.Jazouli<span class="accent">/&gt;</span></div>
+          <p>Élève-ingénieur en Génie Logiciel à l'ENSIAS. Concepteur de backends résilients, systèmes distribués et architectures Cloud.</p>
+          <div class="social-links">
+            <a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/zakariae-jazouli" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:jazoulizaka@gmail.com" class="social-link" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#architecture">Architecture Lab</a></li>
+            <li><a href="#experience">Expériences</a></li>
+            <li><a href="#skills">Compétences</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="assets/CV_Zakariae_Jazouli.pdf" target="_blank">Télécharger le CV</a></li>
+            <li><a href="#video-pitch">Pitch Vidéo</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/zakariaejazouli" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zakariae Jazouli — Conçu pour le ePortfolio ENSIAS</p>
         <a href="#hero">Haut de page &uarr;</a>
       </div>
     </div>
   </footer>
 
-  <script src="app.js?v=2"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
