@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
   <script src="theme.js?v=1"></script>
 </head>
 <body>
@@ -174,9 +174,21 @@
               <span class="badge-tag production">Stage • Autoroutes du Maroc</span>
               <span class="badge-metric">42 ms en moyenne sur flux simulé</span>
             </div>
-            <div class="project-image-container">
-              <img src="assets/adm-dashboard.png" alt="Tableau de bord ADM 2026" class="project-img" loading="lazy">
-            </div>
+            <a class="project-cover cover-adm" href="projects/adm.html" aria-label="Lire l’étude de cas Autoroutes du Maroc">
+              <span class="cover-art" aria-hidden="true">
+                <span class="cover-copy">
+                  <span class="cover-kicker">Télémétrie · MLOps</span>
+                  <span class="cover-heading">Alarmes en<br>temps réel</span>
+                </span>
+                <span class="cover-visual cover-signal">
+                  <span class="cover-signal-bars">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  </span>
+                  <span class="cover-pipeline">Kafka <b>→</b> FastAPI <b>→</b> Oracle</span>
+                </span>
+              </span>
+              <span class="cover-action" aria-hidden="true"><span class="cover-action-label">Lire l’étude</span><span class="cover-action-icon">→</span></span>
+            </a>
             <div class="project-content">
               <h3 class="project-title">Détection d’anomalies aux péages</h3>
               <p class="project-summary">
@@ -206,15 +218,20 @@
               <span class="badge-tag production">Entreprise • Al Omrane</span>
               <span class="badge-metric">−42 % sur le calcul et l’affichage WBS</span>
             </div>
-            <div class="project-image-container">
-              <div class="project-img-placeholder csharp-gradient wbs-preview" aria-hidden="true">
-                <pre><code><span class="wbs-preview-title">Structure des travaux</span>
-Projet
-└─ Contrat
-   └─ Prestation
-      └─ Sous-prestation</code></pre>
-              </div>
-            </div>
+            <a class="project-cover cover-monitoring" href="projects/al-omrane.html" aria-label="Lire l’étude de cas Al Omrane">
+              <span class="cover-art" aria-hidden="true">
+                <span class="cover-copy">
+                  <span class="cover-kicker">Hiérarchie WBS</span>
+                  <span class="cover-heading">Suivi des<br>chantiers</span>
+                </span>
+                <span class="cover-visual cover-wbs">
+                  <span>Projet</span>
+                  <span>Prestation</span>
+                  <span>Sous-prestation</span>
+                </span>
+              </span>
+              <span class="cover-action" aria-hidden="true"><span class="cover-action-label">Lire l’étude</span><span class="cover-action-icon">→</span></span>
+            </a>
             <div class="project-content">
               <h3 class="project-title">Suivi des chantiers chez Al Omrane</h3>
               <p class="project-summary">
@@ -243,9 +260,19 @@ Projet
               <span class="badge-tag fullstack">Next.js 16 • Stripe • 360°</span>
               <span class="badge-metric">55 Tests automatisés</span>
             </div>
-            <div class="project-image-container">
-              <img src="assets/atlas-hero.png" alt="Atlas 360 Marketplace" class="project-img" loading="lazy">
-            </div>
+            <button class="project-cover cover-atlas view-project-btn" type="button" data-project="atlas" aria-haspopup="dialog" aria-label="Voir les détails d’Atlas 360">
+              <span class="cover-art" aria-hidden="true">
+                <span class="cover-copy">
+                  <span class="cover-kicker">Atlas 360 · Maroc</span>
+                  <span class="cover-heading">Itinéraires<br>et panoramas</span>
+                </span>
+                <span class="cover-visual cover-map">
+                  <img src="assets/atlas-itineraires.png" alt="" loading="lazy" decoding="async" width="1920" height="879">
+                  <span class="cover-map-badge">360°</span>
+                </span>
+              </span>
+              <span class="cover-action" aria-hidden="true"><span class="cover-action-label">Voir les détails</span><span class="cover-action-icon">→</span></span>
+            </button>
             <div class="project-content">
               <h3 class="project-title">Atlas 360 — Marketplace &amp; Itinéraires Marocains Panoramiques</h3>
               <p class="project-summary">
@@ -276,9 +303,20 @@ Projet
               <span class="badge-tag systems">JEE • Spring Boot • K8s</span>
               <span class="badge-metric">AWS Multi-tiers</span>
             </div>
-            <div class="project-image-container">
-              <img src="assets/youthchallenge-arch.png" alt="Architecture YouthChallenge" class="project-img" loading="lazy">
-            </div>
+            <button class="project-cover cover-youth view-project-btn" type="button" data-project="youth" aria-haspopup="dialog" aria-label="Voir les détails de YouthChallenge">
+              <span class="cover-art" aria-hidden="true">
+                <span class="cover-copy">
+                  <span class="cover-kicker">Redis · WebSocket</span>
+                  <span class="cover-heading">Classement<br>en direct</span>
+                </span>
+                <span class="cover-visual cover-ranking">
+                  <span><b>01</b><i></i><em>XP</em></span>
+                  <span><b>02</b><i></i><em>XP</em></span>
+                  <span><b>03</b><i></i><em>XP</em></span>
+                </span>
+              </span>
+              <span class="cover-action" aria-hidden="true"><span class="cover-action-label">Voir les détails</span><span class="cover-action-icon">→</span></span>
+            </button>
             <div class="project-content">
               <h3 class="project-title">YouthChallenge — Plateforme Gamifiée Scalable Cloud</h3>
               <p class="project-summary">
@@ -308,13 +346,19 @@ Projet
               <span class="badge-tag systems">Core CS • From Scratch</span>
               <span class="badge-metric">B+ Trees &amp; Buffer Pool</span>
             </div>
-            <div class="project-image-container">
-              <div class="project-img-placeholder java-gradient">
-                <span class="placeholder-icon">🗄️</span>
-                <span class="placeholder-title">Java Relational Query Engine</span>
-                <span class="placeholder-sub">Storage &bull; B+ Tree Index &bull; Cost-based Optimizer</span>
-              </div>
-            </div>
+            <button class="project-cover cover-sql view-project-btn" type="button" data-project="sqlengine" aria-haspopup="dialog" aria-label="Voir les détails du moteur de requêtes Java">
+              <span class="cover-art" aria-hidden="true">
+                <span class="cover-copy">
+                  <span class="cover-kicker">Moteur SQL · Java</span>
+                  <span class="cover-heading">Recherche<br>par index B+</span>
+                </span>
+                <span class="cover-visual cover-btree">
+                  <span class="cover-btree-root">24 │ 48</span>
+                  <span class="cover-btree-branches"><span>08 · 16</span><span>24 · 36</span><span>48 · 64</span></span>
+                </span>
+              </span>
+              <span class="cover-action" aria-hidden="true"><span class="cover-action-label">Voir les détails</span><span class="cover-action-icon">→</span></span>
+            </button>
             <div class="project-content">
               <h3 class="project-title">Mini Moteur de Requêtes Relationnel Java</h3>
               <p class="project-summary">
@@ -343,13 +387,20 @@ Projet
               <span class="badge-tag systems">Systèmes Distribués</span>
               <span class="badge-metric">Vector Clocks</span>
             </div>
-            <div class="project-image-container">
-              <div class="project-img-placeholder distributed-gradient">
-                <span class="placeholder-icon">⚡</span>
-                <span class="placeholder-title">Causal Broadcast System</span>
-                <span class="placeholder-sub">TCP Sockets &bull; Vector Clocks &bull; Multithreading</span>
-              </div>
-            </div>
+            <button class="project-cover cover-causal view-project-btn" type="button" data-project="causal" aria-haspopup="dialog" aria-label="Voir les détails de la diffusion causale distribuée">
+              <span class="cover-art" aria-hidden="true">
+                <span class="cover-copy">
+                  <span class="cover-kicker">Java · Pair-à-pair</span>
+                  <span class="cover-heading">Horloges<br>vectorielles</span>
+                </span>
+                <span class="cover-visual cover-vector">
+                  <span><b>A</b><code>[1, 0, 0]</code></span>
+                  <span><b>B</b><code>[1, 1, 0]</code></span>
+                  <span><b>C</b><code>[1, 1, 1]</code></span>
+                </span>
+              </span>
+              <span class="cover-action" aria-hidden="true"><span class="cover-action-label">Voir les détails</span><span class="cover-action-icon">→</span></span>
+            </button>
             <div class="project-content">
               <h3 class="project-title">Système de Diffusion Causale Distribué Java</h3>
               <p class="project-summary">
